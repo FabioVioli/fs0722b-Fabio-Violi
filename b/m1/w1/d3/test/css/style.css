@@ -1,0 +1,56 @@
+:root{
+    font-size: 25px; /* :root significa "per tutto il documento la dimensione del fonto è ... - A meno che non si modifichi con imput/class - Contiene l'itera pagina- Tutto il documento eredita i parametri di root*/
+}
+
+@font-face { /* font face non è un selettore ma una direttiva. "da questo momento in poi, questo sarà un font in aggiunta agli altri*/
+    font-family: FontPersonale; /* assegnamo un nome col quale sarà trovato*/
+    src: url('../font/Roboto-Regular.ttf') format('truetype'); 
+    
+    /* mostro il persorso. i ../ fanno in modo che si esca dalla cartella in questione, mostrando le altre - il Truetype viene inserito per via dell'estensione ( i file ttf sono in formato truetype, ad esempio ).*/
+
+}
+
+body{ /*su body si modificano le impostazioni che avranno di base tutti gli elementi presenti nel body*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    /* come mai ci sono 3 fonts presenti? Perché sono una lista di alternative nel caso in cui il compure non abbia i font selezionati. senza di esse, chi non possiede il font non sarà in grado di vedere il testo con tale font*/
+}
+
+#p1{
+    font-size: 16px;
+    color: #8949c9; /* Hexadecimal va considerato con coppie di 3 cifre 89 49 c9 */
+    color: rgb(0, 0, 0); /* RGB sono 3 parametri creati da Red Green Blu.  - 0 0 0 è un nero, 255 255 255 è un bianco. Differenti combinazioni, genereranno differenti colori*/
+    color: rgba(0, 0, 0, 0.8); /* rgba è un rgba ( vedi sopra ), con l'aggiunta dell'elemento trasparenza ) - il 4 è un valore che va da 0 a 1 */
+    font-family: FontPersonale /* abbiamo applicato il font importato tramite @fontface */
+}
+
+#p2{
+    font-size: 1rem; /* Misura relativa alla radice - ragioni a proporzioni ( è più facile rendersi conto di come fare i cambiamenti - avendo impostato root font-size 25px, passa da 16px ( il suo standard di default ) al valore del root, che è 25px*/
+    font-family: 'Merriweather', serif; /* abbiamo aggiunto il font importato tramite google font, tramite link in head - di default non è applicato nessuno dei due weight scaricati. Vedi sotto*/
+    font-weight: bold;
+}
+
+#p3{
+    font-size: 20px; 
+}
+
+#p3 span{
+    font-size: 1em; /* viene impostato il valore 1em a 10px, preso da #p3 ( l'elemento radice di default per rem è 16. Noi lo abbiamo impostato a 20px) */
+}
+
+p4{
+    font-size: 10px;
+}
+
+#p4 span{
+    font-size: 1em; /* em prende i parametri da #p4, che lo setta a 10px. Quindi 1 em = 10px*/
+} 
+
+/*                              IMPORTANTE
+
+vh= viewport high ( altezza finestra ) - È un bordo elastico. Non conviene per i font, visto che più si restringe la finestra, più scompare il testo. Verranno utilizzati per il block model */
+
+.line {
+    background-color: green;
+    line-height: 200px; /* imposta l'altezza del campo di scrittura*/
+}

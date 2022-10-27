@@ -1,0 +1,78 @@
+/* Font font-family: 'Playfair Display', serif; */
+
+:root{
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+                            /* INIZIO CSS HEADER /*/
+
+
+.logo{
+    width: 200px;  
+}
+
+.logo-div{
+    text-align: center;
+    background-color: azure;
+}
+
+.logo-caption{ /*Non so perché mi da errore. lo style funziona alla perfezione con i parametri che ho inserito*/
+   text-align: center;
+   border-top: 2px solid rgb(255, 232, 186);
+   background-color: rgb(255, 246, 235); 
+   padding: 15px; 
+}
+
+
+                            /* FINE CSS HEADER /*/
+
+                            /* INIZIO CSS MAIN /*/
+
+h1{
+    text-align: center;
+}
+
+.h1-caption{
+    padding-left: 50px;
+    padding-right: 40px;
+}
+.featured{
+    border-left: 2px solid rgb(255, 232, 186);
+    border: 0%;
+    padding-left: 15px;
+    
+}
+
+#featured{
+    color: rgb(212, 121, 16);
+}
+.focaccia-img{
+    width: 100%;
+    margin: 0%;
+}
+
+h2{
+    border-bottom: 1px solid rgb(206, 247, 247);
+}
+h3{
+    text-align: center;
+    background-color: bisque;
+}
+.main-image-cap{
+    text-align: center;
+    color: rgb(194, 193, 193);
+}
+
+.video{
+    text-align: center;
+}
+                            /* INIZIO CSS MAIN /*/
+
+                            /* INIZIO CSS FOOTER /*/
+
+                            /* INIZIO CSS FOOTER /*/
+

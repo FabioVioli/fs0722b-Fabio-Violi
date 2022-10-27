@@ -1,0 +1,63 @@
+
+
+
+
+
+
+
+div{ /* peso: 1*/
+    color: red;
+}
+
+.colore-blu{ /*peso 10*/
+    color: blue;
+}
+
+.bordo-sotto{
+    border-bottom: 1px solid black;
+}
+
+#sfondo-verde{ /*Peso 100*/
+    background-color: green;
+}
+
+div{
+    color: aqua;
+}
+
+/* Selettori Gerarchici*/
+
+/* avere doppio div porta la specificità a 2, facendolo vincere su div singolo */
+div div{
+    color: green;
+}
+/* Un elemento dentro un altro elemento di chiama child, ed è un'altra classe*/
+
+.testo-grigio div{
+    color: gray;
+}
+
+/* qualunque span che sta dentro a un div, che sta dentro a un testo grigio*/
+.testo-grigio div span{
+    text-decoration: underline;
+}
+/* solo quello che sta dentro lo span ma fuori dal div - In questo caso, inoltre, testo-grigio eredita il colore aqua del div*/
+.testo-grigio > span{
+    text-transform: uppercase;
+}
+
+/* Selettori "Multipli" */
+
+/* con la virgola si fa un elenco. Senza la virgola diventa "figlio di". Vedi esempi di sopra"*/
+
+h1, h2, h3, h4, h5, h6{ /* ogni h ha specificità 1, e non si somma, poiché separati dalla virgola. Ognuno per se */
+    color: gray;
+}
+
+/* selezionare un singolo elemento aumentando la specificità!*/
+
+div#test.classe1.classe2{ /* in questo caso ho raggiunto 1 + 100 + 10 + 10 - Nota che il div va sempre all'inizio */
+    height: 100px;
+    background-color: yellow;
+}
+

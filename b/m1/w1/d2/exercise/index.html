@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Epicode</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+        <!-- Inizio header -->
+
+    <header>
+
+        <img src="assets/logo.svg" alt="">
+        <nav>
+            <p>Epicode - Il blog dei developers</p>
+            <ul>
+                <li><a href="index.html" target="_blank" title="title">Home</a></li>
+                <li><a href="articoli.html" target="_blank" title="articoli">articoli</a></li>
+                <li><a href="job.html" target="_blank" title="job">Job</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <!-- Fine header -->
+
+    </header>
+
+        <!-- Inizio main - diviso in 3 sezioni  -->
+    <main>
+
+        <!-- Section 1 -->
+        <section>
+            <h1 title="come creare un template per i post">Come creare un template per i post</h1>
+            <h4 title="autore">di Mario Rossi - Pubblicato il 25-10-2020</h4>
+            <p title="suddivisione in blocchi">La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le <b>parti comuni</b> da applicare a tutte le pagine.</p>
+            <p title="suddivisione aree">Le varie aree saranno quindi suddivise in:</p>
+
+            <ul>
+                <li title="contenuti header">Contenuti di intestazione del tag "header"</li>
+                <li title="contenuti main">Contenuti centrali variabili "main"</li>
+                <li title="contenuti footer">Contenuti di fine pagina comuni, da inserire nel tag "footer"</li>
+            </ul>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+            <h1 title="formattazione codice">Formattazione del codice</h1>
+            <p title="descrizione formattazione codice">Il testo dell'articolo dovrà essere formattato per idenfiticare tutte le parti da <b>selezionare con i CSS</b>. Perciò i primi passi saranno:</p>
+
+            <ol>
+                <li title="progettazione markup finale">Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato</li>
+                <li title="scrivere html e tags">Scrivere l'HTML dai tag esterni a quelli interni, e dall'alto verso il basso</li>
+                <li title="applicare gli stili CSS">Applicare gli stili CSS</li>
+            </ol>
+
+            <p title="Aumento applicasione stili CSS">L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressoché totale.</p>
+
+            <!-- Inizio tabella diffusione CSS -->
+
+            <table>
+                <caption title="Diffusione del CSS">Diffusione del CSS</caption>
+                <thead>
+                    <tr>
+                        <th>Anno</th>
+                        <th>% di utilizzo</th>
+                        <th>supporto browser</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>2000</td>
+                        <td>20%</td>
+                        <td>17%</td>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td>35%</td>
+                        <td>22%</td>
+                    </tr>
+                    <tr>
+                        <td>2004</td>
+                        <td>45%</td>
+                        <td>42%</td>
+                    </tr>
+                    <tr>
+                        <td>2008</td>
+                        <td>80%</td>
+                        <td>51%</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>100%</td>
+                        <td>76%</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+                    <!-- Fine tabella diffusione CSS -->
+
+                    <!-- Section 3 - Video youtube -->
+        <section>
+
+        <p title="test validazione">Un test di validazione potrà essere fatto tramite il <a href="http://www.youtube.com" target="_blank">tool online</a> dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ad essere stati dei veri developers come loro:</p>
+
+        <!--  VIDEO -- Embedded preso da yt ( i tags non sono stati ancora trattati 
+                       
+            i tag /ogg e /mp4 vanno usati solo per video uppati da locale.
+
+            <video controls width: "360" height: "240">
+                <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                <source src="https://commons.wikimedia.org/wiki/File:Nuages-3.OGG" type="video/ogg">                        
+            </video>
+
+
+
+        Ho cercato dei video con estensione mp4  e ogg ( quelli youtube non hanno estensione nel source, e non ho capito che tipo di video siano )da linkare al rispettivo tipo, e funzionano. 
+
+        Unica cosa il video è lentissimo a caricare, mentre dal sito da cui li ho presi andavano bene.
+            ) -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BMxNOrlBuYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </section>
+    </main>
+            <!-- Fine sezione main / Inizio sezione footer -->
+    <footer>
+        <h2 title="novità">Novità</h2>
+        <p title="rimani aggiornato sulle novità">Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
+
+        <form method="post" action="" target="_blank">
+            <table style="width: 100%;" border="1">
+                <td>
+                    <input type="email" placeholder="Inserisci L'email">
+                    <button title="iscriviti">Iscriviti</button>
+                </td>
+            </table>
+        </form>
+
+        <h2>Articoli correlati</h2>
+        <a href="http://www.epicode.it" target="_blank" title="validare il codice">Validare il codice HTML</a>
+        <p>Categoria Develop</p>
+        <p>Data: 18-9-2020</p>
+        <a href="http://www.epicode.it" target="_blank" title="validare il codice">Correggere la sintassi</a>
+        <p>Categoria: Develop</p>
+        <p>Data: 16-9-2020</p>
+        <a href="http://www.epicode.it" target="blank" title="validare il codice">Meno Kb nella pagina</a>
+        <p>Categoria: ottimizzazione</p>
+        <p>Data: 30-9-2020</p>
+
+        <hr>
+
+       <p title="blog">Blog Epicode ©2021</p>
+       <p title="indirizzo e partita IVA"><i>Testata online di Mario Rossi, registrata con prot. n.213/218 - via Luigi Einaudi 2 - Milano. P.IVA 00112233. <a href="mailto: info@epicode.school" title="mail">info@epicode.school</a></i></p>
+
+    </footer>
+    
+</body>
+</html>

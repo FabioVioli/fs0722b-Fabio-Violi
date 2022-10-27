@@ -1,0 +1,39 @@
+
+/*                              IMPORTANTE
+            SCRIVI SEMPRE ATTACCATO. GLI SPAZI BLOCCANO TUTTO E NON CONTANO COME ERRORI SU VSC!!!!!!!!!!!! */
+.primo-p + span{ /* il + significa = tutti gli span che si trovano dopo un elemento con la classe primo p */
+    color: red;
+}
+
+input[type="text"]{
+    border: 1px solid red;
+}
+
+input[type="text"]:focus{
+    border: 1px solid red;
+}
+
+input[type="checkbox"]:checked +div{ /*se l'elemento successivo è checked, allora colora in giallo */
+    background-color: yellow;
+}
+
+table tr:nth-of-type(even){
+    background-color: rgb(111, 151, 111);
+}
+
+table tr:first-of-type td:hover{ /*al passaggio del mouse qualcosa*/
+    color: white;
+    transition: color 1s; /* tempo impiegato perché avvenga il cambiamento - nel nostro caso, diventerà bianco in 1 secondo con il mouse sopra */
+}
+
+table tr:last-of-type td:after{ /* gli pseudo elementi sono 2 before e after - con after devo scrivere content e mettere un contenuto*/
+    content: ">";
+}
+
+table tr:last-of-type td:before{ /* gli pseudo elementi sono 2 before e after - con after devo scrivere content e mettere un contenuto*/
+    content: "<";
+}
+
+table tr:last-of-type td:hover:before{ /* con i : si possono mettere in sequenza tipo hover e before*/
+    content: "stai passando il mouse";
+}

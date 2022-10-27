@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input required name="Name" type="text" placeholder="nome">
+    <br>
+    <!-- required fain modo che il form in questione sia compilato -->
+    <input name="password" type="password" placeholder="scrivi la tua password">
+    <br>
+    <input name="email" type= "email" placeholder="il tuo indirizzo email"><br>
+    <input type="number" name="numero"><hr>
+
+    <!-- con label, colleghi la checkbox a una scritta. potrai quindi cliccare la checkbox cliccando sulla scritta. Possono applicare un id a qualsiasi ( imput select textare- i tag che possono operare all'interno di un form )-->
+    <input type="checkbox" name="" id="consenso">
+    <label for="consenso">
+        Acconsento al trattamento dei dati
+    </label>
+    <hr>
+
+    <label for="m">maschio</label>
+    <input id="m" type="radio" name="gender" value="m">
+    <label for="f">femmina</label>
+    <input id="f" type="radio" name="gender" value="f">
+    <label for="x">non definito</label>
+    <input id="x" type="radio" name="gender" value="x">
+
+    <!-- checked fa in modo che quell'attributo parta già cliccato ( vietato dalla legge per il consenso dei dati)-->
+    <!-- selected, fa in modo che sia considerato quello di default ( vietato dalla legge per il consenso dei dati) -->
+    <hr>
+
+    <form method="post" action="">
+        <select name="City">
+            <option value="">--</option> 
+            <option value="milano">milano</option> 
+            <option value="roma">roma</option> 
+            <option value="napoli">napoli</option> 
+            <!-- I value possono essere differenti da quel che legge l'utente. lo leggiamo solo noi -->
+        </select>
+
+        <hr>
+
+        <textarea name="messaggio" cols="15" rows="15"></textarea>
+
+        <hr>
+
+        <input type="submit" value="Invia con input di tipo submit">
+        <button >Invia</button>
+
+    </form>
+
+            <!-- Ad ogni tag andiamo ad inserire name -->
+</body>
+</html>

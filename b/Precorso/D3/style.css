@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+body {
+    width: 100%;
+}
+.pagina {
+    width: 100%;
+        height: 500px;  
+        background-image: url("https://www.artstudio54.it/data/photo/5c73181bb42ffa26db6f314da91e75b12eb985349ddc61680523e348702116c3203ccb13a0980491.jpg");
+}
