@@ -1,0 +1,81 @@
+
+
+
+.colonna{
+
+    /* width: calc(100% / 3 -15px); */
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    float: left;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+/* il clearfix si usava una volta. questo è un esempio di come veniva fatto in passato, ma non è bello a vedersi ed è macchinoso */
+.clearfix{
+    clear: both;
+}
+
+/* consente di spostare l'immagine a lato e non sulla riga di testo*/
+.img-right{
+    float: right;
+     /* nasconde l'elemento - rimuovi per veder comparire l'immagine */
+}
+
+.img-left{
+    visibility: hidden;
+}
+
+.colonna.no-float{
+    float: none; /* cancelliamo le impostazioni float prese da colonna*/
+    display: inline-block;  /* trasformiamo da block a inline. in questo modo gli elementi perdono width ed height - Mettendo inline-block trasformiamo in elementi in linea che hanno cmq un block, mantenendo le dimensioni*/
+    margin: 5px 5px;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#q7{
+    border: 4px dashed black;
+    border-bottom: none;
+    border-bottom-left-radius:  50%;
+    border-top-right-radius: 25%;
+    background-color: transparent;
+    outline: 5px dotted red;
+    outline-offset: 5px;
+    
+}
+
+/* #q8{
+    background-color: green;
+    height: 100vh;
+    margin-left: 15px;
+} */
+
+#q8 ul{
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* altre regole css */
+
+#griglia-esperimenti .colonna:nth-of-type(4){
+    opacity: 0.5;
+}
+
+#griglia-esperimenti .colonna:nth-of-type(5){
+    visibility: hidden;
+    box-shadow: 3px 3px 5px black;
+}
+
+#griglia-esperimenti .colonna:nth-of-type(6){
+    display: none;
+}
+
+:target{
+    background-color: red;
+}

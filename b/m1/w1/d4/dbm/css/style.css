@@ -1,0 +1,32 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#q2{
+    overflow: hidden;
+}
+
+#q3{
+    overflow-y: auto;
+}
+
+#q4{
+    width: auto;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+#q5{
+    padding: 15px;
+    box-sizing: border-box;
+  /* sposta il contenuto intero - prova con e senza */
+    margin-left: 50px;
+}
+
+#q6{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    /* margin-left: auto;  -  spinge l'elemento all'estrema destra */
+}

@@ -1,0 +1,49 @@
+
+/* con background-repeat: no-repeat;, l'immagine viene espansa senza però ripetersi. Con contain, viene contenuta l'immagine ma non riempie spazio aggiuntivo*/
+#bg1{
+    background-image: url(../assets/866-536x354.jpg);
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*quando voglio coprire tutta l'area del blocco, a costo di tagliare la foto*/
+#bg2{
+    background-image: url(../assets/866-536x354.jpg);
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /*ti mette l'immagine lavorando su tutti e 2 gli assi, riproporzionando */
+}   
+    #bg3{
+        background-image: url(../assets/1084-536x354-grayscale.jpg);
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        background-repeat: repeat; /* si ripeterò nelle dimensioni importate dal size fino a riempire tutto. partendo dal centro*/
+        background-size: 50px 100px;
+        background-position: center;
+    }
+    #bg4{
+        background-image: url(../assets/1084-536x354-grayscale.jpg), url(../assets/866-536x354.jpg);
+        width: 600px;
+        height: 600px;
+        /* caricate 2 immagini con background image, i parametri messi saranno sempre in ordine. Il primo immagine 1, il secondo 2, il terzo 3, etc... */
+        border: 1px solid black;
+        background-repeat: no-repeat, repeat;
+        background-size: 50px, 100px;
+        background-position: 0 180px, 150px 0; /* puoi posizionare a piacimento lungo le 2 assi */
+    }
+
+    #bg5{
+        background-image: url(../assets/1084-536x354-grayscale.jpg);
+        width: 600px;
+        height: 600px;       
+    }
+    img{
+        max-width: 100%;
+    }
