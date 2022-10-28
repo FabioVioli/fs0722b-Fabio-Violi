@@ -108,9 +108,8 @@ img{
 */
 
 #logo{
-    display: inline-block;
-    padding: 8% 0;
-    
+    max-width: 36%;
+    padding: 7.5% 0 7.5% 0;
 }
 
 /* 
@@ -330,7 +329,7 @@ img{
 
 #footer-z{
     color: #c8e7f0;
-    font-size: 2.4em;
+    font-size: 2.1em;
     line-height: 1.45em;
 }
 
@@ -340,4 +339,7 @@ img{
 
 }
 
-
+#icons{
+    font-size: 2em;
+    color: #c8e7f0;
+}
