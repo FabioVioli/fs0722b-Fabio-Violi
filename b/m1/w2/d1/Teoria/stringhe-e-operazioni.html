@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    var stringa1 = 'Ciao'; // possono essere create sia con apici 'Ciao' che apostrofi "Ciao". In JS non cambia niente.
+
+    // document.write("<div class="testo-rosso">Div creato</div>")  JS riconosce come html. se avessi creato con gli apici 
+    document.write('<div class="testo-rosso">Div creato</div>')
+    // non avrei avuto problemi. Per evitare con "" posso mettere \ all'inizio e alla fine di testo rosso ( nota la posizione)
+    document.write("<div class=\"testo-rosso\">Div creato</div>")
+    
+    // Qualora dovesse essereci un apice nel messaggio, ad esempio "l'html" si risolve con ` ( alt +96) all'inizio e alla fine.
+    document.write(`'<div class=\"testo-rosso\">Ecco l'html</div>`)
+
+    // ALT +96 = ` 
+
+    // CONCATENAMENTO
+    var nome = 'Mario';
+    var saluto = 'Benvenuto';
+
+    document.write(saluto + ' ' + nome + ', come stai?');
+
+    document.write(`${saluto},  ${nome}, Come stai?`);
+
+    // Operazioni matematiche
+
+    console.log(4+3) // => 7
+    console.log( 4 * 3) // => 12
+    console.log( 4 / 3) // => 1.3333333333333
+    console.log( 4 - 3) // => 1
+
+    // il + è un operatore di addizione in caso di numeri, e concatenamento in caso di stringhe.
+
+    // operazioni miste
+
+    var numero = 5;
+    var numeroStringa = '5'; // essendo tra '' non è un numero, ma una stringa.
+
+    console.log(numero + numeroStringa);
+
+    // in caso di somma tra un numero e una stringa, il numero viene convertito in una stringa. Viene sommato a 5 ( affiancato ) 5 + '5' = 55
+
+    console.log(numero * numeroStringa); // la stringa viene convertita in numero e avviene la moltiplicazione.
+
+    console.log(numero * '5a') // NaN 
+
+
+</script>
+
+
+
+    
+</body>
+</html>

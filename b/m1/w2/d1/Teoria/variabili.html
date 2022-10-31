@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // questo è un commento ad una sola riga
+
+        /* questo commento 
+        può essere disposto
+        su più righe
+        */
+
+
+        var nomeVariabile; // in JS il valore è "undefined" - Variabile inizializzata ma non valorizzata
+
+        // console.log(pippo) >>> pippo is "not defined" perché la funzione non esiste.
+
+        // Cosa c'è dentro una variabile vuota o non valorizzata? Il valore di default è undefined.
+
+        console.log(nomeVariabile); // valore undefined - ; non è un obbligo su JS.
+
+        var x = 1; // = assegna ciò che c'è a dx a sx - Questa è una variabile inizializzata e valorizzata.
+
+        console.log(x);
+
+      
+        // la il camelcase impone la seconda parola, e seguenti, con la lettera maiuscola. la variabile potrebbe iniziare al massimo con _ o $ in alternativa al nome in lowcase
+
+        x = 2
+        console.log(x);
+
+
+
+
+
+
+        /* tipi di dato - vanno ricordati */
+
+
+
+
+
+
+        var numero = 5; // variabile numerica ( perché contiene un numero)
+
+        var stringa = 'Ciao'; // i testi tra virgolette - Java se vede virgolette sa che è un testo. nome tecnico STRINGA ( ovvero un valore testuale)
+
+        var booleano = true; // può essere true o false ( servirà in futuro per creare meccanismi on/off ) - nome tecnico VARIABILE BOOLEANA ( true o false )
+
+        var array =[1,5,8,0,'Ciao',[]];  // array = contenitore di valore. Una lista di valori, separati da una virgola. Le parentesi quadre sono array. - Variabile array
+
+        var oggetto = {
+
+            Nome: 'Fabio',
+            cognome: 'Violi',
+        }  // graffe - lista di valori, ma coppie di valori. - nome tecnico variabile oggetto. Si usa la virgola "," e non il punto e virgola ";"
+
+
+        /* ATTENZIONE!!!!! IL TIPO DI DATO PUò ESSERE CAMBIATO!!!!! */
+        console.log(typeof numero)
+        numero = 'ciao';
+        console.log(typeof numero)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+    background-color: crimson;
+    width: 100%;
+    
+}
+
+h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2,h3,li{
+    color: white;
+    text-align: center;
+}
+
+
+ul{
+    padding: 0 25% 0 25%
+}
+
+li{
+    font-size: 1.5em;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

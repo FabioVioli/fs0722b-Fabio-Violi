@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // if = struttura condizionale
+
+        var anni = 30;
+        console.log(anni > 18); // true se è almeno 19
+        console.log(anni >= 18); // true se è almeno 18
+        console.log(anni < 18); // true se è meno di 18
+        console.log(anni <= 18); // true se è meno di 19
+        console.log(anni != 18); //true se è diverso da 18
+        console.log(anni == 18); // true se è uguale a 18
+
+        // ciò ci serve per usare if ( verifica una condizone )
+
+        /*
+        var condizione = true; // alterna true/false
+        if(condizione){
+            alert('sì')
+        }else{
+            alert('no')
+        }
+
+        // Fai questa cosa se è true, altrimenti no
+
+        */
+
+        /* PROVA 1  
+    var anni = prompt ('Quanti anni hai?');
+    if(anni >= 18){
+        document.write('Sei maggiorenne, puoi visitare il sito');
+    }else{
+        location.href = 'https://join.epicode.com/'
+    }
+
+                PROVA 2 
+    else{
+        document.write('sei minorenne, non puoi visitare il sito')
+    }40 
+
+    // si possono mettere degli if dentro altri if.
+                    PROVA 3 */
+
+    var anni = prompt ('Quanti anni hai?');
+    if(anni >= 18 && anni < 110){
+        document.write('Sei maggiorenne, puoi visitare il sito');
+    }else if(anni >= 110){
+        document.write('sei antico, ma puoi visitare comunque il sito')
+    }else{
+        location.href = 'https://join.epicode.com/'
+    }
+
+    </script>
+
+</body>
+</html>
