@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+        let obj = {  
+        proprietà: 'valore' // il nome collegato al valore di chiama proprietà/chiave. L'operatore di assegnamento sono i :
+
+        }
+
+        let margherita = {
+            gusto:'margherita',
+            prezzo: 5,
+            aggiunte: [     // esempio di array
+                {
+                    nome: 'mozzarella',
+                    prezzo: 1
+                },
+                {
+                    nome: 'doppio impasto',
+                    prezzo: 1
+                },
+
+                {
+                    nome: 'bufala',
+                    prezzo: 1
+                }
+            ],
+            mostraPrezzo: function(){ // METODO
+                console.log('il prezzo della pizza margherita è pari a 5€')
+            }
+        }
+                            // sx oggetto, dx proprietà
+        console.log(margherita.prezzo) // prende il prezzo della margherita
+        console.log(margherita.aggiunte[2]) 
+        
+        // con gli array si mette il numero tra parentesi quadre. il primo elemento è sempre 0, il secondo 1, il terzo 2 , etc... quindi mozzarella sarà 0 e prezzo sarà 2 
+
+        margherita.mostraPrezzo()
+
+        // le funzioni contenute all'interno degli oggetti ( assegnate ad una proprietà di un oggetto ) si chiamano METODI
+
+    </script>
+</body>
+</html>

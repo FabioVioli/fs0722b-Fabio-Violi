@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- Faremo un check con un pulsante che dirà se il numero è pari oppure no -->
+
+
+    <input id="testo" type="number">
+    <button onclick="saluta()">Controlla se è pari</button> 
+
+
+    <script>
+
+        function saluta(){
+            let input = document.getElementById("testo");
+            // console.dir(input.style) // leggi dettagli in console
+
+            let result = input.value % 2 == 0;
+
+            let messaggio = result ? 'è pari' : 'è dispari';
+
+            alert(messaggio);
+            
+            
+            /*
+            if(result === true){ se la var è un booleano, non occorre fare result === true, ad esempio.
+                
+                alert('è pari')
+            }else{
+                alert('è dispari')
+            } 
+            
+            */
+
+
+            
+        } 
+
+        
+
+       // saluta() // () significa "cerca la funzione saluta, ed eseguila"
+
+    </script>
+</body>
+</html>

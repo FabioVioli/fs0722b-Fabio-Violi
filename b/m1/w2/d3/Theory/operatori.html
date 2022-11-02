@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let testo = 'Ciao';
+        testo = 'Benvenuto'; // il vecchio valore è stato eliminato
+
+        testo += ' Mario'
+        console.log(testo);
+
+
+        let a = 2;
+        a += 2; // 2 + 2;
+        console.log(a); // darà 4
+
+        a -= 2;  // 2 - 2
+        console.log(a);
+        
+        a *= 2; // 2 * 2
+        console.log(a);
+
+        a /= 2; // 2 / 2
+        console.log(a);
+
+        a++; // incremento il valore di 1
+        console.log(a);
+        a--; // decremento il valore di 1
+        console.log(a);
+
+        //operatori di confronto
+
+        let b = 10;
+        console.log(b < 10); // controllami che b sia inferiore a 10. darà false
+        console.log(b > 10); // false
+        console.log(b < 10);   // false
+        console.log(b >= 10);   // true
+        console.log(b <= 10);   // true
+
+        console.log(b == 10);   // true
+        console.log(b != 10);   // false
+
+        console.log(b == '10');   // true perché il valore della stringa se convertito in numero è uguale a 10.
+        console.log(b === '10');   // false, perché non avviene una conversione, ma avviene anche un check anche sul tipo di dato ( stringa nel nostro caso, e non numero)
+        console.log(b === 10); // true - Valore e tipo di dati "uguali"
+
+        console.log(b !== '10'); // true se il tipo di dato o il tipo di valore sono diversi.
+        console.log(b !== 10); // false, poiché il valore ed il tipo di dato sono uguali.
+
+        console.log(!(b ==10)) 
+        console.log(!true) 
+
+        // riga 58/59 sono per verificare il contrario ( cosa succede se, ad esempio, l'utente fa il contrario?)
+
+        /* OPERATORE TERNARIO*/
+
+        let anni = 30;
+        let consenso = (anni >= 18) ? 'puoi accedere' : 'accesso negato';
+        console.log(consenso);
+
+        // se quello tra parentesi è true, allora puoi accedere. altrimenti accesso negato. il ? indica il check, e a seguire il messsaggio se true. i : invece rappresentano l'else. Che qualora messo darà un secondo messaggio.
+
+    </script>
+</body>
+</html>

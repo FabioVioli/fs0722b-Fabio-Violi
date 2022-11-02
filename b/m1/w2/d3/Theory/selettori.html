@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div id="test"></div>
+        <div class="prova"></div>
+        <div class="prova"></div>
+        <div class="prova"></div>
+        <div></div>
+
+
+
+
+    <script>
+
+                        // SELETTORI CLASSICI
+        document.getElementById('test').innerHTML = 'testo inserito da js'
+        // inner.html ha effetto su tutti i tag con apertura e chiusura, quindi no immagini, ad esempio.
+        let elementiProva = document.getElementsByClassName('prova')
+        elementiProva[0].innerHTML ='ciao';
+        elementiProva[1].innerHTML ='ciao';
+        elementiProva[2].innerHTML ='ciao';
+
+        
+        let elementDiv = document.getElementsByTagName('prova'); // una lista di elementi
+
+        console.log(elementDiv)
+    </script>
+</body>
+</html>

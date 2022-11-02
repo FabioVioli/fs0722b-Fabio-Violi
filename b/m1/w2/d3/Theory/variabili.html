@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+/*
+
+                            ██╗     ███████╗████████╗
+                            ██║     ██╔════╝╚══██╔══╝
+                            ██║     █████╗     ██║   
+                            ██║     ██╔══╝     ██║   
+                            ███████╗███████╗   ██║   
+                            ╚══════╝╚══════╝   ╚═╝   
+                                                    
+
+*/
+        var a = 0;
+
+        {
+            var b = 1;
+            console.log(a);
+        }
+        console.log(b);
+
+        let c = 2; // essendo fuori blocco, sarà raggiungibile dai blocchi successivi
+        {
+            let d = 3; // essendo interna ad un blocco, non sarà raggiungibile dai gruppi successivi
+            console.log(c);
+        }
+
+        // console.log(d); "d is not defined" perché non essite fuori dal blocco
+
+        {
+            let d = 4;
+            console.log(d)
+
+        }
+
+        let f; // determina uno scope globale ( accessibile da qualsiasi blocco o zona )
+        {
+            f = 5;
+
+        }
+        console.log(f)
+
+        var test = 6;
+        {
+            // console.log(test) // cannot access 'test' before initialization
+            let test = 7;
+            console.log(test)
+        }
+
+
+        // scope delle funzioni
+
+        var t = 9;
+        function prova(){
+            console.log(t);
+            var h = 8;
+
+        }
+        //console.log(h) // h is not defined
+
+        /*  
+                    ██████╗ ██████╗ ███╗   ██╗███████╗████████╗
+                    ██╔════╝██╔═══██╗████╗  ██║██╔════╝╚══██╔══╝
+                    ██║     ██║   ██║██╔██╗ ██║███████╗   ██║   
+                    ██║     ██║   ██║██║╚██╗██║╚════██║   ██║   
+                    ╚██████╗╚██████╔╝██║ ╚████║███████║   ██║   
+                    ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝   
+
+        */
+
+        const NOME_COSTANTE = 'prova';
+        // LE COSTANTI SONO SCRITTE IN MAIUSCOLO ( NON OBBLIGO TECNICO, MA OBBLIGO MORALE!!!!)
+        console.log(NOME_COSTANTE);
+
+        const OGGETTO = {
+            nome: 'Mario'
+        }
+
+        console.log(OGGETTO.nome); // il . significa che quello che c'è a sx è sempre un oggetto
+
+        OGGETTO.nome = 'Roberta'
+        console.log(OGGETTO.nome)
+
+    </script>
+
+</body>
+</html>
