@@ -84,12 +84,10 @@ console.log(4-x)
 var name1 = "john"
 var name2 = "John"
 
-console.log(name1 != name2)
-
-if(name1 == name2){
-  console.log(true)
+if (name1.toLowerCase === name2.toLowerCase){
+  console.log('true')
+}else{
+  console.log('false')
 }
-
-
 
 
