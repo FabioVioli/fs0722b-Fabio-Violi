@@ -1,0 +1,162 @@
+/* 
+
+         ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ██╗     
+        ██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗██║     
+        ██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║██║     
+        ██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██║     
+        ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║███████╗
+         ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
+                                                           
+
+*/
+
+:root{
+
+    font-family: 'Rubik', sans-serif;
+    background-image: url(https://www.wallpaperflare.com/static/731/896/999/ice-landscape-icicle-wallpaper.jpg);
+    background-position: center;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: rgba(41, 1, 38, 0.836);
+}
+
+a:hover{
+    color: red;
+    transition-duration: 0.7s;
+}
+
+body{
+
+margin: 0 38%;
+}
+
+footer{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-image: repeating-radial-gradient(yellow,red);
+    font-weight: 600;
+
+}
+
+h1,h2{
+    color: rgba(41, 1, 38, 0.836);
+}
+
+header{
+
+    border: 5px solid black;
+    margin: 2% 0;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, red, yellow);
+
+}
+
+main{
+    border: 5px solid black;
+    border-radius: 2%;
+    background-image: linear-gradient(to top, red, yellow);
+    margin: 2% 0;
+}
+
+p{
+    margin: 4px 0 4px 0;
+}
+
+
+/* 
+
+            ██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗ 
+            ██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+            ███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝
+            ██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗
+            ██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║
+            ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+                                                
+
+*/
+
+
+/* 
+
+                    ███╗   ███╗ █████╗ ██╗███╗   ██╗
+                    ████╗ ████║██╔══██╗██║████╗  ██║
+                    ██╔████╔██║███████║██║██╔██╗ ██║
+                    ██║╚██╔╝██║██╔══██║██║██║╚██╗██║
+                    ██║ ╚═╝ ██║██║  ██║██║██║ ╚████║
+                    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+                                
+
+*/
+
+
+
+
+#text{
+    margin: 2% 0;
+    height: 100px;
+    width: 100%;
+    max-width: 87%;
+    font-size:65px;
+    border: 2px solid black;
+    background-color: rgb(192, 245, 252);
+
+}
+
+#b-n{
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1%;
+
+}
+
+#b-n:hover{
+    background-color: rgb(108, 226, 255);
+    transition-duration: 0.7s;
+}
+
+#b-zero{
+    width: 6.1em;
+    height: 3em;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+
+#b-zero:hover{
+    background-color: rgb(108, 226, 255);
+    transition-duration: 0.7s;
+}
+/* 
+
+                    █████╗ ███████╗██╗██████╗ ███████╗
+                    ██╔══██╗██╔════╝██║██╔══██╗██╔════╝
+                    ███████║███████╗██║██║  ██║█████╗  
+                    ██╔══██║╚════██║██║██║  ██║██╔══╝  
+                    ██║  ██║███████║██║██████╔╝███████╗
+                    ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ ╚══════╝
+                                                    
+
+*/
+
+/* 
+
+            ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+            ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+            █████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+            ██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+            ██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+            ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+
+
+*/
+
+#icon{
+    width: 3.5%;
+}
+

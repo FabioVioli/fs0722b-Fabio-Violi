@@ -10,7 +10,7 @@
     
 <div class="contenitore">
 
-    <input type="text" id="numeri">
+    <input type="text" id="text">
     <button data-simbolo="1"onclick="aggiungiCifra(this)">1</button> 
     <button data-simbolo="2"onclick="aggiungiCifra(this)">2</button>
     <button data-simbolo="3"onclick="aggiungiCifra(this)">3</button>
@@ -33,17 +33,17 @@
 
         function aggiungiCifra(bottone){
 
-            document.getElementById("numeri").value += bottone.getAttribute('data-simbolo');
+            document.getElementById("text").value += bottone.getAttribute('data-simbolo');
 
         }
 
         function tot(){
-            let numeri = document.getElementById("numeri");
-            numeri.value = eval(numeri.value);
+            let text = document.getElementById("text");
+            text.value = eval(text.value);
         }
 
         function del(){
-            numeri.value = '';
+            text.value = '';
         }
     </script>
 </body>
