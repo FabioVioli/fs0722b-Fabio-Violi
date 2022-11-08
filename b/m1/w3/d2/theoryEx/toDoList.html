@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        .todo{
+
+            padding: 15px;
+            background-color: bisque;
+            margin-bottom: 15px;
+            border: 1px solid brown;
+        }
+
+        .todo.completato{
+            background-color: green;
+
+        }
+
+        .todo button{
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .todo.completato.button{
+            background-color: rgb(128, 0, 0);
+
+        }
+    </style>
+
+
+</head>
+<body>
+    
+
+    <input type="text" name="" id="text"><button id="salva">Salva</button>
+
+    <div id="lista">
+    
+        <h1>da fare</h1>
+    </div>
+
+    <div id="lista-completati">
+
+        <h1>completato</h1>
+    </div>
+
+    <script>
+        document.querySelector('#salva')
+        .addEventListener('click', function(){
+
+            let testo = document.querySelector('#text');
+
+            let div = document.createElement('div');
+            div.textContent = testo.value;
+            div.classList.add('todo');
+
+            let completato = document.createElement('button');
+            completato.textContent = 'Completato';
+            
+            completato.addEventListener('click', ()=> {
+            div.classList.add('completato'); // assegno una classe aggiuntiva
+            document.querySelector('#lista-completati')
+            .append(div); // sposto il div nella lista completati
+            })
+
+            div.append(completato);
+            document.querySelector('#lista').append(div);
+
+            testo.value = ''
+
+
+        });
+
+
+    </script>
+</body>
+</html>

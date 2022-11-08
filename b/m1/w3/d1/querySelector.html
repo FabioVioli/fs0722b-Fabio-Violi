@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="test">Testo id</div>
+    <div class="giallo">Testo class</div>
+    <div class="giallo">Testo class</div>
+    <div class="giallo">Testo class</div>
+    <div class="giallo">Testo class</div>
+    <div >Testo tag</div>
+ 
+
+    <script>
+// invece di elementbyid e simili, si potranno usare i query selectors.
+// strumento che ci permetterà di selezionare gli elementi del dom usando parametri css
+
+
+       let test =  document.querySelector('#test')
+
+       console.dir(test)
+
+       test.style.color = 'red' // ogni oggetto può essere trattato con tutti gli elementi css 
+
+    //  let giallo1 =  document.querySelector('.giallo') // restituisce il primo
+       let giallo1 =  document.querySelectorAll('.giallo') // prende tutto.
+
+        // accetta qualsiasi elemento. più moderno di queryselector. Se voglio selezionare un elemento in questione ( ad esempio il primo), faccio come per gli array e aggiungo un [0] in fondo.
+
+       console.log(giallo1)
+
+       // se sbagliamo a richiamare il dato ( ex: #tests invece di #test), il risultato sarà null
+
+        for(let elemento of giallo){
+            elemento.style.backgroundColor = 'yellow';
+        }
+
+       let div = document.querySelectorAll('div') // tutti gli elementi div
+    </script>
+</body>
+</html>

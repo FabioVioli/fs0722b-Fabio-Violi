@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+        nomeFunzione()// per via dell'hoisting posso eseguire le funzioni prima ( o molto dopo ) della loro definizione.
+
+        function nomeFunzione(){ // questa funzione esegue e non restituisce nulla
+            console.log('test')
+
+        }
+
+        function nomeFunzione2(){ 
+            return 'test'
+
+        }
+
+        console.log(nomeFunzione2())
+        // funzione a non ha senso passarla al console log, visto che non restituisce alcun dato, mentre funzione b sì.
+
+        // ricordarsi di lanciare la funzione.
+
+
+
+
+
+
+                    //Funzioni parametriche / parametrizzate
+
+
+
+
+
+
+    
+        function somma (a,b){ 
+            if(a && b){ // se esistono sia a che b, fammi la somma.
+            return a + b; // return se eseguito blocca l'esecuzione della funzione
+            }
+            throw new Error (`manca uno dei 2 parametri`)
+        }
+
+
+        console.log(somma(3,6)) // la somma viene effettuata, poiché entrambi i valori sono "forniti/definiti"
+
+    /*  console.log(somma(3,0))
+        console.log(somma(3)) // errore, manca uno dei 2. */
+
+        
+        function sommaDefault (a = 0,b = 0){ 
+            return a + b;
+        }
+
+        console.log(sommaDefault(5)) // 5+0
+        console.log(sommaDefault(5,7)) // 5+7
+
+
+
+
+
+                            //operatore di spread
+
+
+
+
+
+    /*  function sommaPro(a,...altro){ // l'operatore di spread mi crea un  array in cui mettere gli elementi successivi
+            console.log(a);
+            console.log(altro);
+         }          
+
+         sommaPro('ciao', 1,3,5,7,9) */
+
+         
+         
+    /*  function sommaPro(...numeri){
+            let somma = 0;
+            for(let numero of numeri){
+                somma +- numero;
+            }
+            return +- numero;
+
+         }          
+
+         sommaPro(1,3,5,7,9) */
+
+         function sommaSuper(...numeri){
+            
+            return numeri.reduce(function(p,c){return p + c});
+            // reduce si cicla tutto l'array numeri da p ( previous value )fino c ( current value), che sono lettere messe a caso, a indicare il valore numero 1 e quello successivo, ripetendo poi
+         }
+
+         let risultato = sommaSuper(1,3,5,7,9);
+         console.log(risultato);
+
+
+
+
+                        // self invoking function
+         // sono funzioni usa e getta. le useremo più avanti per casi molto specifici.
+
+
+/*
+         (function(){ // le tonde possono contenere una funzione
+            console.log('Ciao');
+         })() 
+         
+         // se faccio seguire le tonde da un paio di tonde, la eseguo.
+         // parametro base per self invoking è dunque ()()
+*/
+
+
+         let dato = (function(){
+            return 'ecco il dato';
+         })()
+
+         console.log(dato);
+
+
+         // accessibilità variabili
+
+         var a = 0;
+         function test(){
+            let b = 1;
+            console.log(b) // accedo a b perché ha scope "locale", e sono all'interno della funzione
+            console.log(a) // accedo ad a perché ha una scope "globale", e quindi al di fuori della funzione.
+         }
+            // console.log (b) non posso, poiché esiste solo all'interno della funzione.
+
+
+         test()
+
+
+
+
+                                    // Funzioni Freccia
+                // servono allo scopo di scrivere più in fretta le funzioni
+
+    const nomeFunzione2Freccia = () => 'test';
+
+    console.log(nomeFunzione2Freccia ());
+
+   /*    la funzione di sotto è rifatta con freccia quì sopra
+         Solitamente, no graffe ma freccia. Inoltre non c'è return.
+
+         Le parentesi tonde servono affinché non venga copiato come scritto tutto quel che c'è dopo l' uguale =
+
+         Inoltre, non si può andare a capo per scelta, altrimenti finisce la funzione.
+
+            function nomeFunzione2(){
+            return "test"
+        }   */
+
+
+        const fnFrecciaParametrica = a => a * 2;
+
+        // se abbiamo un solo parametro, possiamo omettere le parentesi tonde.
+        // se avessi avuto più parametri, tipo  = a,b  avrei dovuto scrivere (a,b)
+
+
+        console.log(fnFrecciaParametrica(5));
+
+        // quando ci servono più righe dobbiamo mettere le graffe
+
+        const textToMaiusc = testo => {
+            let maiuscText = testo.toUpperCase(); // trasformo qualunque cosa in maiuscolo
+            console.log(maiuscText);
+        }
+
+        textToMaiusc('ciao');
+
+
+
+                            //closures
+        // in tutti quegli ambiti in cui abbiamo funzoone dentro funzione ( figlia)
+
+        function funzioneGenitore(){
+
+            let a = 5;
+            function funzioneFiglia(){
+                let b = 8;
+                console.log(a);  // la funzione figlia può prendere dal padre
+            }
+              //  console.log(b)  -  non è possibile fare l'opposto
+            funzioneFiglia();
+        }
+
+        funzioneGenitore();
+
+
+                        // SFIDA
+
+        function aFn(x){
+            return function bFn(y){
+                return function cFn(z){
+                    return x+ y+ z;
+                }
+            }
+        }
+
+        console.log(aFn(5)(6)(7))
+
+        
+    </script>
+</body>
+</html>

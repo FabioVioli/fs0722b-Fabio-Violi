@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        .todo{
+
+            padding: 15px;
+            background-color: bisque;
+            margin-bottom: 15px;
+            border: 1px solid brown;
+        }
+
+        .todo.completato{
+            background-color: green;
+
+        }
+
+        .todo button{
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .todo.completato.button{
+            background-color: rgb(128, 0, 0);
+
+        }
+    </style>
+
+
+</head>
+<body>
+    
+
+    <input type="text" name="" id="text"><button id="salva">Salva</button>
+
+    <hr>
+
+    <input type="search" placeholder="Cerca task">
+    <div id="lista">
+    
+        <h1>da fare</h1>
+    </div>
+
+    <div id="lista-completati">
+
+        <h1>completato</h1>
+    </div>
+
+    <script>
+        document.querySelector('#salva')
+        .addEventListener('click', function(){
+
+            let testo = document.querySelector('#text');
+
+            let div = document.createElement('div');
+            div.classList.add('todo');
+
+            let span = document.createElement('span');
+            div.textContent = testo.value;
+
+
+            let completato = document.createElement('button');
+            completato.textContent = 'Completato';
+            
+            completato.addEventListener('click', ()=> {
+            div.classList.add('completato'); // assegno una classe aggiuntiva
+            document.querySelector('#lista-completati')
+            .append(div); // sposto il div nella lista completati
+            })
+
+            div.append(span, completato);
+            document.querySelector('#lista').append(div);
+
+            testo.value = ''
+
+
+        });
+
+
+        let cerca = documento.querySelector('#cerca');
+
+        cerca.addEventListener('keyup', ()=> {
+            let todos = document.querySelectorAll('.todo');
+
+            console.log(todos)
+        })
+    </script>
+</body>
+</html>

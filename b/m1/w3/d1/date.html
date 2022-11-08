@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <style>
+
+        #orologio{
+
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+
+        .lancetta{
+
+            width: 50px;
+            position: absolute;
+            transform-origin: left;
+        }
+    </style>
+
+    <div id="time">
+
+        <div></div>
+    </div>
+
+    <script>
+
+        let now = new Date(); // dentro now non c'è una data attuale, ma può essere qualsiasi cosa. 
+        let anno = now.getFullYear();
+        let mese = now.getMonth(); // conteggio come gli array.
+        let giornoSettimana = now.getDay(); // con day mette primo giorno della settimana, con indice zero. "Non ti dice il giorno da 1-31."
+        let giornoMese = now.getDate(); // giorno del mese
+
+        //possiamo ovviamente fare funzioni multiple
+
+        let time1 = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+
+        let past = new Date ('2/2/2022 22:22:22') //Possiamo creare più new date al fine di confrontarle tra di loro ad esempio mettendo ('2/2/2022 22:22:22') al posto della ().
+
+        if (past < now){ // se past contiene una data precedente a now, allora scrivi ""
+
+            console.log('il 2 febbraio 2022 è una data passata')
+            console.log(past.getTime(), now.getTime()) // tempo su c.log espresso in ms.
+        }
+
+        console.log(anno, mese, giornoSettimana, giornoMese, time1);  // prende l'ora dal browser, visto che non ha ancora i parametri per comunicare col server
+
+
+        "setInterval" // function callback che richiede una funzione e un numero in ms ) 
+
+        console.log(now.toLocaleDateString());
+        console.log(now.toLocaleDateString());
+
+        let opt= {
+
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }
+        let dataFormatta = now.toLocaleDateString('it-IT',opt);
+        console.log(dataFormatta);
+
+        
+    </script>
+</body>
+</html>
