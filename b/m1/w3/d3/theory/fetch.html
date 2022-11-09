@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dati"></div>
+    
+    <script>
+
+        // Json = Javascript Object notation
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response)=>{  // mi da l'oggetto contenente i dati ( al momento inaccessibili - abbiamo solo l'informazione sulla richiesta )
+
+        return response.json() // richiede che response sia trasformato nel contenuto della pagina richiesta - fai sparire l'oggetto response, e recuperami la pagina.
+
+        })
+
+        // quando ritorniamo then, il valore viene sparato nella then successiva
+
+        .then((utenti)=>{
+            console.log(utenti)
+            let dati = document.getElementById('dati')
+            for(let u of utenti){
+                dati.innerHTML += u.name + '<br>'
+            }
+        })
+
+        // occorre sempre fare più then quando si usa fetch
+
+    </script>
+</body>
+</html>

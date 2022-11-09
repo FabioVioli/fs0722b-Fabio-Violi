@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+
+    <script>
+
+        // Promise è una classe che può contenere funzioni. In caso in cui la condizione sia vera lancio succeso, altrimenti lancio errore ( il secondo valore sarà facoltativo )
+
+        let p = new Promise(function(successo, errore){
+
+            let password = 'password';
+
+            if (password == 'password'){
+
+                // successo ed errore sono due callback che restituiscono un dato.
+                
+                successo('Accesso consentito'); // eseguo la prima callback di then
+            }else{
+                errore('Errore nella richiesta'); // altrimenti, eseguo la seconda callback di then
+            }
+        }) 
+        // then è un method che si può associare a qualsiasi costrutto che contenga una promise. Vuole sempre una callback.
+
+        //possiamo mettere una in caso di successo ( sopra ) e anche una in caso di insuccesso ( sotto )
+        p.then(
+            (risultato)=>console.log(risultato),
+            (errore)=>console.log(errore)
+        )
+
+
+        //possiamo avere multipli then, ad esempio console.log e document.write.
+
+        p.then(
+            (risultato)=>document.write(risultato),
+            (errore)=>document.write(errore)
+        )
+
+
+        // promise con solo successo
+
+        let promise = new Promise (function(successo){
+            setTimeout(function(){ // imposta un timeOut ( non usare nelle promise)
+                successo('fatto');
+
+            },3000); // ms per il setTimeout
+        })
+
+        promise.then((data)=> console.log(data)) // risultato console dopo 3000ms
+
+        console.log(1)   //è una riga sincrona, viene eseguita per prima
+        </script>
+</body>
+</html>

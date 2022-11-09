@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // oggetti.html > 
+        // quando ci occorrono molti oggetti, crearli uno ad uno non è efficiente. Usiamo quindi una funzione ( costruttore )
+
+        function Persona(_nome, _cognome){ // costruttore. usa this e non let.
+            this.nome= _nome;
+            this.cognome= _cognome;
+            this.presenzatione = function(){ // è un metodo
+                console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`)
+            } // usiamo il this perché, se necessario, potrebbe prendere il nome modificato in futuro ( vedi ****** )
+        }
+
+        let mario = new Persona('Mario','Rossi') // sfrutta a pieno un costruttore
+        mario.nome = 'Pippo'; // ******
+        console.log(mario)
+        mario.presenzatione()
+
+        let andrea = new Persona();
+        andrea.nome = 'Andrea'; // posso anche modificare le proprietà dopo la creazione dell'oggetto ( vedi diff con mario rossi )
+        andrea.cognome = 'Ancona';
+        console.log(andrea);
+        andrea.presenzatione();        
+
+
+        Persona.prototype.anni = null;  // aggiungo una proprietà con valore 0
+
+        andrea.anni = 30;
+        console.log(andrea);
+    </script>
+</body>
+</html>

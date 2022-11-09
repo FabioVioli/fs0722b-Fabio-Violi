@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Persona{  // useremo questo per costruire oggetti in serie.
+
+            constructor(_nome, _cognome){
+                this.nome= _nome;
+                this.cognome= _cognome;
+                this.presentazione();   // possiamo inserire anche metodi ( a parte constructor ) all'interno di altri metodi
+            }
+
+            presentazione(){
+                console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`)
+            }
+
+            static spiegazione(){ // static methods è il creare un metodo statico, che si richiama partendo dal nome della classe ( rende il metodo marcato come stati tipo Math o Date. ovvero, non farai mai "new Math o Date". Non farai mai new "spiegazione")
+                console.log('questa clase serve a descrivere le persone')
+
+            }
+        }
+
+
+            Persona.spiegazione();
+
+            // Persona.presentazione() non è possibile.
+
+
+
+
+
+
+        
+
+        let mario = new Persona('Mario','Rossi');
+        console.log(mario);
+
+        let andrea = new Persona();
+        andrea.nome = 'Andrea';
+        andrea.cognome = 'Ancona';    
+        console.log(andrea);
+    </script>
+</body>
+</html>
