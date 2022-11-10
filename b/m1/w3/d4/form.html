@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+input:not(input[type='submit']){
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"]{
+    background-color: green;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    
+
+
+    <form id="myForm">
+
+        <div>
+            <input type="text" required id="nome" id="nome" placeholder="nome">
+            <!-- con required id abbiamo messo la validazione lato frontend -->
+            <span></span>
+        </div>
+
+        <div>
+            <input type="text"  id="cognome" placeholder="cognome">
+            <span></span>
+        </div>
+
+        <div>
+            <input type="email" id="email" placeholder="email">
+            <span></span>
+        </div>
+
+        <div>
+            <input type="password" id="password" placeholder="password">
+            <span></span>
+        </div>
+
+        <button type="button">mostra/nascondi</button> 
+
+            <!-- mettendo type button, gli sto dicendo di non inviare il form. di default i bottoni dentro il form, se premuti, inviano il form-->
+
+        <input type="submit" id="invia">
+    </form>
+
+
+
+    <script>
+                    // mettiamo ora la validazione lato backend
+        let form = document.getElementById('myForm');
+
+        form.addEventListener("submit", function(e){
+
+            e.preventDefault(); // blocca funzionalità defalt ( che nel caso del form è "clicco, ed il form invia"  
+            let valid = true;   // variabile di controllo
+
+            let nome = document.getElementById('nome');
+            let cognome = document.getElementById('cognome');
+            let email = document.getElementById('email');
+            let password = document.getElementById('password');
+
+
+            if(!nome.value){  // if nome == ""; se il value dentro nome non c'è
+                nome.nextElementSibling.textContent = 'devi inserire il nome'
+                valid = false;
+            }else{
+                nome.nextElementSibling.textContent = '';
+            }
+            if(!cognome.value){  // if cognome == ""; se il value dentro cognome non c'è
+                cognome.nextElementSibling.textContent = 'devi inserire il cognome'
+                valid = false;
+            }else{
+                cognome.nextElementSibling.textContent = '';
+            }
+
+            if(!email.value){  // if email == ""; se il value dentro email non c'è
+                email.nextElementSibling.textContent = 'devi inserire il email'
+                valid = false;
+            }else{
+                email.nextElementSibling.textContent = 'devi inserire la email'
+                valid = false;
+            }
+            
+            if(!password.value){  // if password == ""; se il value dentro password non c'è
+                password.nextElementSibling.textContent = 'devi inserire il password'
+                valid = false;
+            }else{
+                password.nextElementSibling.textContent = '';
+            }
+
+
+            if(valid){
+                console.log('form inviato')
+                //form.submit()
+            }
+            console.log('test')
+        })
+
+       /* mappare i tasti
+        document.querySelector('#nome').addEventListener('keydown', function(){
+            console.log(e)
+
+            if(e.key == 'w'){
+                //spostati avanti
+            }
+            if(e.key == 'a'){
+                //spostati a sinistra
+            }
+            if(e.key == 's'){
+                //spostati indietro
+            }
+            if(e.key == 'd'){
+                //spostati a destra
+            }
+            
+        });
+        */
+    </script>
+</body>
+</html>

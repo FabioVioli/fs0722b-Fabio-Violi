@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+input:not(input[type='submit']){
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"]{
+    background-color: green;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    
+
+
+    <form id="myForm">
+
+        <div>
+            <input type="text" data-error="Manca il nome" required id="nome" id="nome" placeholder="nome" class="notEmpty">
+            <!-- con required id abbiamo messo la validazione lato frontend -->
+            <span></span>
+        </div>
+
+        <div>
+            <input type="text" data-error="Manca il cognome" id="cognome" placeholder="cognome" class="notEmpty">
+            <span></span>
+        </div>
+
+        <div>
+            <input type="email" data-error="Manca la mail" id="email" placeholder="email" class="notEmpty">
+            <span></span>
+        </div>
+
+        <div>
+            <input type="password" data-error="Manca la password" id="password" placeholder="password" class="notEmpty">
+            <span></span>
+        </div>
+
+        <button type="button">mostra/nascondi</button> 
+
+            <!-- mettendo type button, gli sto dicendo di non inviare il form. di default i bottoni dentro il form, se premuti, inviano il form-->
+
+        <input type="submit" id="invia">
+    </form>
+
+
+
+    <script>
+                    // mettiamo ora la validazione lato backend
+        let form = document.getElementById('myForm');
+
+        form.addEventListener("submit", function(e){
+
+            e.preventDefault(); // blocca funzionalità defalt ( che nel caso del form è "clicco, ed il form invia"  
+            let valid = true;   // variabile di controllo
+
+            let campi = document.querySelectorAll('.notEmpty');
+
+for(let c of campi){
+            if(!c.value){  
+                let error = c.getAttribute
+                valid = false;
+            }else{
+                nome.nextElementSibling.textContent = '';
+            }
+            }
+
+
+            if(valid){
+                console.log('form inviato')
+
+            }
+            console.log('test')
+        })
+
+
+    </script>
+</body>
+</html>

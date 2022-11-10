@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <div id="lista">
+
+
+  </div>
+
+  <button id="crea">Crea</button>
+  <button id="elimina">elimina</button>
+    <script>
+
+        let crea = document.querySelector('#crea');
+        // selettore 
+
+        let arrayDiv = [];
+        let i = 0;
+
+
+        crea.addEventListener('click', function(){
+            // una volta selezionato, lancio evento
+
+            let div = document.createElement('div'); 
+            let span = document.createElement('span'); 
+     
+            // crea div ( lo fa solo nascere)
+            
+            // div.innerHTML = 'Div creato';  -  alternativa a textNode
+
+            let divText = document.createTextNode('Div creato ' + i);
+            let spanText = document.createTextNode(' Span text creato');
+            // crea un nodo di tipo testuale...
+
+            arrayDiv.push(div);
+
+            span.append(spanText);
+            div.append(divText, span);
+            // ... che però va appeso al div
+
+            // con innerHtml non hai bisogno di appendere
+
+            document.querySelector('#lista').append(div)
+
+            div.addEventListener('click', function(){
+
+                console.log(div.childNodes)// Arraty con tutto il contenuto dell'elemento selezionato
+                console.log(div.childNodes[0].textContent) // testo del divo ( escludendo il contenuto dello span figlio)
+                console.log(div.firstChild.textContent) // testo div escludendo il testo dello span figlio
+                console.log(div.childNodes[1].textContent)  // testo dello span figlio del div
+                console.log(div.lastChild.textContent) // testo dello span figlio del div
+                console.log(div.parentNode)  // l'elemento genitore
+                console.log(div.nextElementSibling) // l'elemento fratello successivo
+
+
+
+             //   div.remove();    - se voglio eliminare l'elemento al click
+            })
+            i++;
+        });
+
+ 
+
+        let elimina = document.querySelector('#elimina');
+        elimina.addEventListener('click', function(){
+                                // alternativa
+         //   let arrayDiv = document.querySelectorAll('#lista > div')  // in alternativa all'array.
+            for(let el of arrayDiv){ 
+                el.remove();
+            }
+
+            arrayDiv = []; // se ho creato la variabile globale, conviene anche svuotare l'array, o alla lunga appesantisce il sito. Anche se cancelli, con la funzione, l'array non si svuota. Quindi dando arrayDiv = [] resettiamo
+        })
+
+
+    
+
+
+
+    </script>
+</body>
+</html>
