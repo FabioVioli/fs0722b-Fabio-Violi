@@ -71,6 +71,9 @@
         
         document.querySelector('.myClass').className = "myHeading"
 
+        //oppure document.querySelector('h1')
+        // title.classList.remove('myClass')
+        // title.classList.add('myHeading')
       }
 
       addClassToTitle()
@@ -80,8 +83,11 @@
 
 
       const changePcontent = function () {
-        document.querySelector("p").innerHTML = "contenuto paragrafo cambiato"
-
+       let p = document.querySelectorAll("div > p");
+       for (let i = 0; i < p.length; i++) {
+        p[i].textContent = "nuovo contenuto"
+        
+       }
 
         }
       changePcontent()
@@ -94,36 +100,45 @@
       document.querySelector("a").href= "https://www.google.com"
       }
 
+      // con queryselectorAll va ciclato o non funziona
       changeUrls()
       /* ESERCIZIO 5
        Scrivi una funzione per aggiungere un nuovo elemento alla seconda lista non-ordinata.
       */
 
 
-      const addToTheSecond = function () {
-
+      const addToTheSecond = function (content) {
+        let a = document.querySelector('#secondList');
+        let b = document.createElement('li')
+        b.innerHTML = content;
+        a.appendChild(b)
         
       }
 
-      addToTheSecond()
+      addToTheSecond("nuovo elemento aggiunto alla seconda lista")
 
       /* ESERCIZIO 6
        Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
       */
 
 
-      const addParagraph = function () {
-
+ /*     const addParagraph = function (content) {
+        let p = document.createElement('p');
+        p.textContent = content;
+        let div = document.querySelector('div > p');
+        div.appendChild(p);
       }
-      addParagraph()
+      addParagraph()  */
 
-      console.log("esercizio 8")
-      const paintItGreen1 = function () {
-        document.getElementById("firstList").style.backgroundColor = "green";
-
+      const addParagraph = function (content) {
+        const div = document.querySelectorAll('div')[0]
+        div.innerHTML += `<p>${content}</p>`
+        
       }
 
-      paintItGreen1()
+      addParagraph('nuovo paragrafo nel primo div')
+
+
       /* ESERCIZIO 7
        Scrivi una funzione per far scomparire la prima lista non-ordinata.
       */
@@ -139,19 +154,22 @@
        Scrivi una funzione per rendere verde lo sfondo di ogni lista non-ordinata.
       */
 
-      // la firstList si trova all'esercizio 6
+        
 
       const paintItGreen2 = function () {
-        document.getElementById("secondList").style.backgroundColor = "green";
+        let green = document.querySelectorAll('ul');
+        for ( let lista of green);
+        lista.style.backgroundColor = 'green'
       }
 
 
         paintItGreen2()
+
       /* ESERCIZIO 9
        Rendi il tag h1 capace di cambiare colore del testo ogni volta che l'utente ci clicca sopra.
       */
 
-      const makeItClickable = function () {
+      const makeItClickable = function (lista) {
         let h1 = document.querySelector('h1')
         h1.addEventListener('click', function(){
 
@@ -175,6 +193,7 @@
       }
 
       changeFooterText()
+
       /* ESERCIZIO 11
        Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
       */
@@ -194,7 +213,7 @@
       */
 
       window.onload = function () {
-        alert("ciao")
+       // alert("ciao")
       }
 
       window.onload()
