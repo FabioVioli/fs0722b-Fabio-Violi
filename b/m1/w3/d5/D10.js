@@ -148,6 +148,7 @@ const dice = function(){
   let x = Math.round(Math.random()*(6-1)+1);   
   // come nell'esercizio B. Ho aggiunto però il Min-Max, visto che dovevo escludere lo 0
   console.log(x)
+  return x
 }
 
 dice() 
@@ -245,16 +246,21 @@ onlyLetters()
 */
 
 
-console.log("Exercise 6")
+console.log("Exercise 6 - ok")
 
-const isThisAnEmail = function(){
+ const isThisAnEmail = function(){
 
+let reg = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}'); // applico una RegExp
 
+let check = ["google.it", "fabio.violi@gmail.it", "fabio.violi@google.it", "www.unicredit.it"];      // Email e fake mails da testare
 
+check.forEach((email) => {  // for each check
+
+    console.log(reg.test(email))  
+});
 }
 
-
-
+isThisAnEmail()
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
@@ -286,15 +292,25 @@ whatDayIsIt()
 */
 
 
-console.log("Exercise 8")
+console.log("Exercise 8 - ok")
 
 
-const rollTheDices = function(){
+const rollTheDices = function(throws){
 
+    let x = [];
+    let y = [];
 
+    for (let i = 0; i < throws; i++) {
+      y.push(dice());
+      
+    }
+    
+    x.values = y;
+    x.sun = eval(y.join('+'))
+    console.log(x)
 }
 
-
+rollTheDices(3)
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -321,11 +337,28 @@ howManyDays()
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 
-console.log("Exercise 10")
+console.log("Exercise 10 - ok")
 
 
 const isTodayMyBirthday = function(){
-  
+
+    let bMonth = 11;        // mese
+
+    let bDay = 06;         // giorno
+    
+    let data = new Date();      // data odierna
+
+    if(bDay == data.getDate()           // check del giorno ( da non confondere con
+                                        //getDay......)
+    && bMonth == data.getMonth()+1){   // check del mese 
+
+      return console.log(true)
+
+    }else{
+
+      return  console.log(false);
+
+    }
 }
 
 isTodayMyBirthday()
@@ -334,20 +367,22 @@ isTodayMyBirthday()
 
 /*
 
-        █████╗ ██████╗ ██████╗  █████╗ ██╗   ██╗███████╗       ██╗   
-        ██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝██╔════╝       ██║   
-        ███████║██████╔╝██████╔╝███████║ ╚████╔╝ ███████╗    ████████╗
-        ██╔══██║██╔══██╗██╔══██╗██╔══██║  ╚██╔╝  ╚════██║    ██╔═██╔═╝
-        ██║  ██║██║  ██║██║  ██║██║  ██║   ██║   ███████║    ██████║  
-        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚═════╝  
-                                                                      
-        ██████╗  ██████╗  ██████╗ ███████╗████████╗████████╗██╗      
-        ██╔═══██╗██╔════╝ ██╔════╝ ██╔════╝╚══██╔══╝╚══██╔══╝██║      
-        ██║   ██║██║  ███╗██║  ███╗█████╗     ██║      ██║   ██║      
-        ██║   ██║██║   ██║██║   ██║██╔══╝     ██║      ██║   ██║      
-        ╚██████╔╝╚██████╔╝╚██████╔╝███████╗   ██║      ██║   ██║      
-        ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚═╝      
-                                                                      
+
+       █████╗ ██████╗ ██████╗  █████╗ ██╗   ██╗███████╗       ██╗   
+      ██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝██╔════╝       ██║   
+      ███████║██████╔╝██████╔╝███████║ ╚████╔╝ ███████╗    ████████╗
+      ██╔══██║██╔══██╗██╔══██╗██╔══██║  ╚██╔╝  ╚════██║    ██╔═██╔═╝
+      ██║  ██║██║  ██║██║  ██║██║  ██║   ██║   ███████║    ██████║  
+      ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚═════╝  
+
+       ██████╗  ██████╗  ██████╗ ███████╗████████╗████████╗██╗      
+      ██╔═══██╗██╔════╝ ██╔════╝ ██╔════╝╚══██╔══╝╚══██╔══╝██║      
+      ██║   ██║██║  ███╗██║  ███╗█████╗     ██║      ██║   ██║      
+      ██║   ██║██║   ██║██║   ██║██╔══╝     ██║      ██║   ██║      
+      ╚██████╔╝╚██████╔╝╚██████╔╝███████╗   ██║      ██║   ██║      
+       ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚═╝      
+
+
 
 */
 
@@ -479,10 +514,21 @@ const movies = [
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
-console.log("Exercise 11")
+console.log("Exercise 11 - ok")
 
 
+const obj = {
+  primo: 'primo',
+  secondo: 'secondo'
+}
 
+const deleteProp = function (obj, prop) {
+  delete obj[prop];
+  return obj;
+}
+
+let obj2_0 = deleteProp(obj, 'secondo')
+console.log(obj2_0)
 
 //let newuser = deleteProp(user, 'surname')
 
@@ -548,37 +594,85 @@ onlyTheyears()
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
-console.log("Exercise 15")
+console.log("Exercise 15 - ok")
 
 
-const onlyInLastMillennium = function(){
+function onlyInLastMillennium(){
 
+  let x = [];
 
-}
+  for(i=0; i < movies.length;i++){
 
+    if(parseInt(movies[i].Year) < 2000) // converto ogni stringa in numero e vedo se è maggiore o superiore a 2000.
 
+    x.push(movies[i]);    // quelli inferiori, li metto nell'array
+  } 
+     return console.log(x)   
+  }
+
+      onlyInLastMillennium()
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
 
-console.log("Exercise 16")
+console.log("Exercise 16 - ok")
 
 const sumAllTheYears = function(){
+  
+  let x = [];
+  let sum = [];  
+  let tot = 0;
 
+    for (let i = 0; i < movies.length; i++) {  
+      // ciclo per recuperare tutti gli di uscita dei film
+
+        let y = movies[i].Year;  
+        x.push(y);      
+
+    }
+
+    for (let i = 0; i < x.length; i++) {
+      // converto gli anni "stringhe" in numeri
+        sum.push(parseInt(x[i]))
+    }
+    for (let i = 0; i < sum.length; i++) {
+      // faccio la somma degli anni, ora convertiti in numeri
+        tot += sum[i]
+
+    }
+  console.log(tot)
 
 }
 
 sumAllTheYears()
+
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
 
-console.log("Exercise 17")
+console.log("Exercise 17 - ok")
 
+
+const searchByTitle = function(movie){
+  let arr = [];                             // arr vuoto
+  let x;                                    // var indefinita
+
+  for (let i = 0; i < movies.length; i++) {
+    arr.push(movies[i].Title);            // ciclo e pusho i titoli
+    
+  } 
+
+  x = arr.filter(m => m.includes(movie));     //filtro titolo sull'array
+  console.log(x) ;
+  return x;                 // aggiunge ciclo dopo ciclo i titoli al log
+  
+}
+
+searchByTitle('Lord')
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -586,9 +680,32 @@ console.log("Exercise 17")
 */
 
 
-console.log("Exercise 18")
+console.log("Exercise 18 - da sistemare")
 
+const searchByDivide = function(movie){
+  let unmatch = []; 
+  let match = [];                            // arr vuoto extra rispetto al 17
+  let x;                                    
 
+  for (let i = 0; i < movies.length; i++) {
+    unmatch.push(movies[i].Title);            // ciclo e pusho i titoli
+    
+  } 
+
+  x = unmatch.filter(m => m.includes(movie));     //filtro titolo sull'array
+  match.push(x);
+  console.log(match);
+  unmatch.reduce(function(match){
+  
+    return match
+
+  })
+  console.log(match)
+                                  // aggiunge ciclo dopo ciclo i titoli al log
+  console.log(unmatch);
+}
+
+searchByDivide('Lord')
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
@@ -597,14 +714,14 @@ console.log("Exercise 18")
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 
-console.log("Exercise 19")
+console.log("Exercise 19 - ok")
 
-const removeIndex = function(n){
+const removeIndex = function(x){
 
-
-}
-
-
+  movies.splice(x,1)       // rimuovo il valore del parametro dalla lsita 
+}                           // in questo caso il 6 (0,1,2,3,4,"5")
+console.log(movies)
+removeIndex(5)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
@@ -704,19 +821,13 @@ ex24()
 */
 
 
-console.log("Exercise 25")
+console.log("Exercise 25 - ok")
 
 const ex25 = function(){
 
-  let x = document.querySelector('#myList') 
+    document.getElementById('myList');
 
-  for (let i = 0; i < array.length; i++) {
-
-  
-    
-  }
-  
-  console.log(y)
+    myList.innerHTML = '';
 
 }
 
@@ -743,12 +854,12 @@ ex26()
 
 /*
 
-                  ███████╗██╗  ██╗████████╗██████╗  █████╗     
-                  ██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔══██╗    
-                  █████╗   ╚███╔╝    ██║   ██████╔╝███████║    
-                  ██╔══╝   ██╔██╗    ██║   ██╔══██╗██╔══██║    
-                  ███████╗██╔╝ ██╗   ██║   ██║  ██║██║  ██║    
-                  ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    
+                      ███████╗██╗  ██╗████████╗██████╗  █████╗     
+                      ██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔══██╗    
+                      █████╗   ╚███╔╝    ██║   ██████╔╝███████║    
+                      ██╔══╝   ██╔██╗    ██║   ██╔══██╗██╔══██║    
+                      ███████╗██╔╝ ██╗   ██║   ██║  ██║██║  ██║    
+                      ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    
                                                               
                        ██╗███████╗     █████╗ ██████╗ ██╗   ██╗
                        ██║██╔════╝    ██╔══██╗██╔══██╗██║   ██║
@@ -779,7 +890,22 @@ console.log("-----------------------EXTRA JS ADVANCED------------------------")
 */
 
 
-console.log("Exercise 27")
+console.log("Exercise 27 - ok")
+
+
+function halfTree(n) {
+  let string = "";                //stringa inizialmente vuota
+  for (let i = 1; i <= n; i++) {      
+    for (let x = 0; x < i; x++) {     
+      string += "*";      // aggiung "i" asterisco + il precedente valore    
+    }                     // della stringa
+                     
+    string += "\n";       // vado a capo 
+  }
+  console.log(string);      // mezzo albero
+};
+
+halfTree(3);
 
 
 /* ESERCIZIO 28
@@ -796,18 +922,57 @@ console.log("Exercise 27")
 
 
 
-console.log("Exercise 28")
+console.log("Exercise 28 - ok")
 
+function tree(n) { // vedi ex 27
 
+  let string = "";
+  
+  for (let i = 1; i <= n; i++) {
+    
+    for (let x = 1; x <= n - i; x++) {  // aggiungo uno spazio ad ogni ciclo,
+      string += " ";                    // al fine di dare la forma dell'albero
+    }                                   
+    for (let y = 0; y < 2 * i - 1; y++) {
+      string += "*";
+    }
+    string += "\n";
+  }
+  console.log(string);
+};
+
+tree(3)
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 
-console.log("Exercise 29")
+console.log("Exercise 29 - ok")
 
+
+  function isItPrime(n){
+
+    if ( n == 1 || n == 2 ) {   // escludo 1 ee 2 
+      
+      return console.log(true); 
+  }
+  for ( let i = 2; i < n; i++ ) {  
+    // effettua un nr di cicli pari al valore del numero
+
+      if ( n % i == 0 ) {
+
+          return console.log(false);
+          // se a qualsiasi punto del ciclo trova che il numero si divide per un numero che non sia lo stesso, senza decimali, allora non si tratta di un numero primo.
+      }
+  } 
+
+  return console.log(true);
+  // viceversa, se a fine ciclo non è stato possibile dividerlo per numeri più piccoli, è un numero primo.
+  
+  };
+  
+  isItPrime(7)
 
 
 
