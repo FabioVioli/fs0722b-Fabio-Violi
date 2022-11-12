@@ -684,29 +684,34 @@ searchByTitle('Lord')
 */
 
 
-console.log("Exercise 18 - da sistemare")
+console.log("Exercise 18 - ok")
 
 const searchByDivide = function(movie){
-  let unmatch = []; 
+  let moviesListA = []; 
+  let moviesListB = [];
   let match = [];                            // arr vuoto extra rispetto al 17
-  let x;                                    
+  let unmatch = [];                                
 
   for (let i = 0; i < movies.length; i++) {
-    unmatch.push(movies[i].Title);            // ciclo e pusho i titoli
-    
+    moviesListA.push(movies[i].Title);            // ciclo e pusho i titoli
+    moviesListB.push(movies[i].Title);   
   } 
 
-  x = unmatch.filter(m => m.includes(movie));     //filtro titolo sull'array
+  x = moviesListA.filter(m => m.includes(movie));      //filtro titolo sull'array a                                  second del valore inserito nel parametro
   match.push(x);                  // e pusho ogni singolo result dentro match
-  console.log(match);
-  unmatch.reduce(function(match){
-    return match
-
-  })
+  console.log(match);         
   
 
-                                  // aggiunge ciclo dopo ciclo i titoli al log
+
+
+  y = moviesListB.filter(m => !m.includes(movie));      //filtro titolo sull'array a                                  second del valore inserito nel parametro
+  unmatch.push(y);                  // e pusho ogni singolo result dentro match
   console.log(unmatch);
+
+
+
+                                  
+  console.log(moviesListA);
 }
 
 searchByDivide('Lord')
