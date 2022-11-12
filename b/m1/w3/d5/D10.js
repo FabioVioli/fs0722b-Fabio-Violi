@@ -300,13 +300,13 @@ const rollTheDices = function(throws){
     let x = [];
     let y = [];
 
-    for (let i = 0; i < throws; i++) {
-      y.push(dice());
-      
+    for (let i = 0; i < throws; i++) { // in base al valore del parametro
+      y.push(dice());       // invoco la funzione il nr di volte specificato
+                            // e inserisco i valori dentro y
     }
     
-    x.values = y;
-    x.sun = eval(y.join('+'))
+    x.values = y;               // x ora possiede y come proprietà
+    x.sum = eval(y.join('+'))   // associo una seconda proprietà ( somma) ad x
     console.log(x)
 }
 
@@ -321,15 +321,19 @@ console.log("Exercise 9 - ok")
 
 const howManyDays = function(){
 
-  let DateX = new Date('06/11/1984');
-  let today = new Date();
+  let dateX = new Date('06/11/1984');       // data scelta 
+  let today = new Date();                   // today
   
-  const days = (DateX, today) =>{
-      let diff = DateX.getTime() - today.getTime();
+  const days = (dateX, today) =>{
+      let diff = dateX.getTime() - today.getTime();  // prendo entrambe le date con il medesimo formato.
+      console.log(dateX)
       let sum = Math.ceil(diff / (1000 * 3600 * 24));
+      // ottengo la diff tra le due date in giorni ( valore negativo)
+      console.log(sum)
       return sum;
   }
-  console.log(" Ci sono " + days(DateX, today) + " giorni tra la data selezionata e oggi");
+  console.log(" Ci sono " + Math.abs(days(dateX, today)) + " giorni tra la data selezionata e oggi"); // uso abs per convertire il valore negativo in positivo
+  
 }
 howManyDays()
 
@@ -518,16 +522,16 @@ console.log("Exercise 11 - ok")
 
 
 const obj = {
-  primo: 'primo',
+  primo: 'primo',                 // obj con 2 prop
   secondo: 'secondo'
+  }
+
+const deleteProp = function (obj, prop) {     // parametri
+  delete obj[prop];               // rimuovo il sec
+  return obj;                     // e ritorno obj
 }
 
-const deleteProp = function (obj, prop) {
-  delete obj[prop];
-  return obj;
-}
-
-let obj2_0 = deleteProp(obj, 'secondo')
+let obj2_0 = deleteProp(obj, 'secondo')  // nuovo obj
 console.log(obj2_0)
 
 //let newuser = deleteProp(user, 'surname')
@@ -700,7 +704,7 @@ const searchByDivide = function(movie){
     return match
 
   })
-  console.log(match)
+  
                                   // aggiunge ciclo dopo ciclo i titoli al log
   console.log(unmatch);
 }
@@ -749,7 +753,7 @@ console.log("Exercise 21 - ok")
 
 const ex21 = function(){
 
-  let x = document.querySelectorAll("td")
+  let x = document.querySelectorAll("td")       // seleziono tutti i td
   console.log(x)
 }
 
@@ -825,9 +829,9 @@ console.log("Exercise 25 - ok")
 
 const ex25 = function(){
 
-    document.getElementById('myList');
+    document.getElementById('myList');        // seleziono myList tramite Id
 
-    myList.innerHTML = '';
+    myList.innerHTML = '';                // rimuovo il contenuto ( blank )
 
 }
 
