@@ -687,10 +687,10 @@ searchByTitle('Lord')
 console.log("Exercise 18 - ok")
 
 const searchByDivide = function(movie){
-  let moviesListA = []; 
+  let moviesListA = [];                 // 2 liste. una per ogni operazione
   let moviesListB = [];
-  let match = [];                            // arr vuoto extra rispetto al 17
-  let unmatch = [];                                
+  let match = [];                            // arr match
+  let unmatch = [];                          // arr unmatch            
 
   for (let i = 0; i < movies.length; i++) {
     moviesListA.push(movies[i].Title);            // ciclo e pusho i titoli
@@ -704,8 +704,9 @@ const searchByDivide = function(movie){
 
 
 
-  y = moviesListB.filter(m => !m.includes(movie));      //filtro titolo sull'array a                                  second del valore inserito nel parametro
-  unmatch.push(y);                  // e pusho ogni singolo result dentro match
+  y = moviesListB.filter(m => !m.includes(movie));      
+  //filtro titolo sull'array a second del valore inserito nel parametro e prendo ciò che non ha quel valore
+  unmatch.push(y);                // e pusho ogni singolo result dentro unmatch
   console.log(unmatch);
 
 
