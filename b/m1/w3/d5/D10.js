@@ -697,14 +697,14 @@ const searchByDivide = function(movie){
   } 
 
   x = unmatch.filter(m => m.includes(movie));     //filtro titolo sull'array
-  match.push(x);
+  match.push(x);                  // e pusho ogni singolo result dentro match
   console.log(match);
   unmatch.reduce(function(match){
-  
     return match
 
   })
   
+
                                   // aggiunge ciclo dopo ciclo i titoli al log
   console.log(unmatch);
 }
