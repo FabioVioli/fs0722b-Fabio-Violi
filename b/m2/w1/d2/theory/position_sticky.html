@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Sticky</title>
+
+    <style>
+
+        p, div p{
+            font-size: 1.2em;
+        }
+
+        .sticky{
+             position: sticky; /*  la classe che ha sticky si ancora in cima ( top:0) */
+            top: 0;
+            border: 3px solid #00f;
+            background-color: #f00;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .text{
+            padding-bottom: 2000px;
+        }
+
+        code{
+            color: #f00;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h2>Position Sticky</h2>
+
+    <p>prova a fare <b>scroll</b> della pagina, per capire come funziona sticky</p>
+    <div class="sticky"></div>
+    <div class="text">
+
+        <p>In questo esempio, mi aspetto che quando faccio scroll, l'elemento che ha <code>Position: sticky</code> si ancori <em>( sticks )</em> al top della pagina (<code>top:0</code> <br> Chiaramente, quando faccio scroll al contrario, si rimuove</p>
+
+        <p>Un elemento con position sticky, passa da una <code>position:relative</code> ad una <code>position:fixed</code>, se si scrolla o meno. <br> È <code>Position:relative</code> fintanto che c'è uno scroll, e quando raggiunge la posizione diventa sticked ( attaccato/incollato ) nella nuova posizione, come un <code>Position:fixed</code></p>
+
+        <p>Per funzionare correttamente cross-browser, devo aggiungere il prefisso <code>-webkit</code> per Safari</p>
+
+        <p><strong>Sticky funziona su elementi <code>SIBLINGS</code>, cioè fratelli.</strong> Sticky funziona tra elementi allo stesso livello di html ( elementi fratelli. <b><u> NON FUNZIONA</u></b> se applicato a un elemento child )</p>
+    </div>
+
+
+</body>
+</html>

@@ -54,7 +54,7 @@ header nav li a::before {
     }
 
     header div img {
-        display: inline-block;
+        display: inline;
         padding-top: 10px;
     }
 
@@ -65,10 +65,17 @@ header nav li a::before {
         margin-top: 25px;
         margin-bottom: 10px;
     }
+    header nav ul {
+        text-align: center;
+    }
     header nav li {
         display: inline;
         padding-right: 10px;
+        margin: 0;
+
     }
+
+
 
 }
 
@@ -77,7 +84,11 @@ header nav li a::before {
         margin: 0 8% 0 8%;
     }
 
-header{
+    header div{ 
+        width: 70%;
+    }
+
+    header{
     padding: 0;
 }
     header, header div, header div img, header div p, header ul{
@@ -181,11 +192,12 @@ iframe {
 
     main iframe, main section{
         display: inline-block;
-        width: 49%;
+        width: 50%;
         height: 250px;
-        margin: 0;
+        margin: -2px;
         padding: 0;  
         border-radius: 20px;
+        vertical-align: middle;
 }
 
 /* 
@@ -276,7 +288,9 @@ tbody tr:last-of-type {
     }
     
 }
+
 /* FORM */
+
 input {
     padding: 5px;
     border: 0;
@@ -293,7 +307,7 @@ button {
 @media only screen and (min-width: 1200px){
 
     button{
-        height: 45px;
+        height:  45px;
     }
 }
 
@@ -327,11 +341,13 @@ aside div p:last-child {
 
 @media only screen and (min-width: 1200px){
 
+    aside{
+        width: 100%;
+    }
     aside div {
         display: inline-block;
-        width: 33%;
-        height: 100px; 
-        margin: auto;
+        width: 33.3333%; 
+        margin-inline: -2px;
     }
 
     aside h2 {

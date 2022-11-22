@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 0 10px;
+
+        }
+
+
+        /* HEADER */
+
+
+        header {
+            background-color: navy;
+            text-align: center;
+
+        }
+
+        header h1{
+            color: white; 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+        }
+    
+        nav {
+            background-color: blueviolet;
+            height: 30px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            float: left;
+            border-right: 3px solid white;
+            padding: 0 94.5px;
+        }
+
+        /* FLOAT ROMPE LA CARATTERISTICA DI DISPLAY BLOCK E FA FLUTTUARE GLI ELEMENTI A SINISTRA E A DESTRA */
+
+        /* I TAG A CUI ASSEGNAMO FLOAT NON CONTRIBUISCONO ALL'ALTEZZA DEL CONTENITORE!!! */
+        nav li#last {
+            border-right: none;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            line-height: 30px;
+            display: block;
+        }
+
+        nav a:hover{
+            background-color: white;
+            color: blueviolet;
+        }
+
+
+        /*MAIN*/
+
+        main{
+            padding: 10px;
+        }
+
+
+        aside{
+            float: left; width: 300px;
+            margin-right: 10px;
+
+        }
+
+        main img {
+            width: 100%;
+        }
+
+
+        /* GLI ELEMENTI FLOAT VANNO SEMPRE PRIMA DI QUELLI NON FLOAT */
+
+        aside#right{
+            float: right;
+        }
+
+
+
+        section .img-even{
+            width: 75px;
+            float: left;
+            margin-left: 10px;
+
+        }
+
+        section .img-odd{
+            width: 75px;
+            float: right;
+            margin-right: 10px;
+        }
+
+
+        /* FOOTER */
+
+
+        footer {
+
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            clear: both;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- INTESTAZIONE -->
+
+        <header>
+            <h1>Epicode</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Html</a> </li>
+                    <li><a href="#">Css</a> </li>
+                    <li><a href="#">Javascript</a> </li>
+                    <li><a href="#">Typescript</a> </li>
+                    <li id="last"><a href="#">Angular</a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- CORPO CENTRALE -->
+
+        <main>
+            <aside>
+                <img class="flower" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <img class="flower" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+            </aside>
+                
+            <aside id="right">
+                <img class="flower" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <img class="flower" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+            </aside>
+
+            <section>
+                <img class="img-odd" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <P>Candy marshmallow wafer bonbon donut liquorice jelly-o. Marshmallow dragée pie apple pie bonbon chocolate cake. Bonbon chocolate cake tootsie roll jelly-o caramels gummies marzipan jelly beans candy canes. Candy canes candy canes cake jelly beans chupa chups sesame snaps chocolate bar apple pie. Gingerbread chocolate bar tootsie roll marzipan sugar plum jelly sweet carrot cake. Marshmallow topping gummies candy canes powder cheesecake lemon drops jujubes. Cotton candy muffin cake donut macaroon halvah sesame snaps dragée. Sweet gummi bears apple pie tart jelly beans icing. Sweet marzipan sesame snaps cake muffin lemon drops. Pastry pudding dragée liquorice dragée macaroon. Marshmallow ice cream chocolate cake gingerbread gingerbread gingerbread pie oat cake. Shortbread jelly-o sugar plum candy canes powder tart pie cake.</P>
+                <img class="img-even" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <p>Chocolate dragée apple pie donut chocolate cake ice cream. Sugar plum tiramisu sweet roll dragée powder chocolate cake. Tiramisu cheesecake powder sweet soufflé biscuit lollipop tootsie roll croissant. Cotton candy cupcake candy canes lemon drops cupcake chocolate bar chocolate cake sweet. Candy canes apple pie jelly beans dessert cookie. Candy canes cake wafer cake sweet. Powder halvah apple pie gummies jujubes icing pudding tootsie roll. Lemon drops tiramisu chocolate cake macaroon tootsie roll chocolate bar pastry. Jelly beans biscuit candy oat cake candy canes jelly beans tootsie roll biscuit bear claw. Jelly beans jelly-o cotton candy brownie gummies candy canes danish donut. Chocolate dragée candy canes chocolate bar cupcake soufflé lemon drops carrot cake. Cotton candy dessert sesame snaps croissant wafer.</p>
+                <img class="img-odd" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <p>Dragée donut sweet cheesecake dragée danish sugar plum fruitcake apple pie. Marzipan lemon drops cupcake gummi bears carrot cake soufflé. Sesame snaps croissant lollipop candy canes croissant cookie macaroon. Cheesecake toffee bonbon pastry soufflé candy canes jelly-o lemon drops gingerbread. Liquorice brownie jelly chocolate oat cake. Gummi bears gummi bears croissant cake dessert. Chupa chups powder candy topping gummies. Halvah croissant cupcake chocolate gingerbread. Wafer shortbread sweet jujubes oat cake candy lollipop tiramisu. Topping cupcake soufflé danish brownie sugar plum candy canes fruitcake ice cream. Lollipop danish dragée croissant sugar plum biscuit oat cake carrot cake pie. Jelly-o marzipan soufflé gummi bears chocolate marzipan sugar plum chupa chups. Tootsie roll soufflé cake tootsie roll gingerbread cheesecake icing gummi bears cupcake.</p>
+                <img class="img-even" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <p>Chocolate dragée apple pie donut chocolate cake ice cream. Sugar plum tiramisu sweet roll dragée powder chocolate cake. Tiramisu cheesecake powder sweet soufflé biscuit lollipop tootsie roll croissant. Cotton candy cupcake candy canes lemon drops cupcake chocolate bar chocolate cake sweet. Candy canes apple pie jelly beans dessert cookie. Candy canes cake wafer cake sweet. Powder halvah apple pie gummies jujubes icing pudding tootsie roll. Lemon drops tiramisu chocolate cake macaroon tootsie roll chocolate bar pastry. Jelly beans biscuit candy oat cake candy canes jelly beans tootsie roll biscuit bear claw. Jelly beans jelly-o cotton candy brownie gummies candy canes danish donut. Chocolate dragée candy canes chocolate bar cupcake soufflé lemon drops carrot cake. Cotton candy dessert sesame snaps croissant wafer.</p>
+                <img class="img-odd" src="../../d1/theory/assets/images/img_white_flower.jpeg" alt="">
+                <p>Dragée donut sweet cheesecake dragée danish sugar plum fruitcake apple pie. Marzipan lemon drops cupcake gummi bears carrot cake soufflé. Sesame snaps croissant lollipop candy canes croissant cookie macaroon. Cheesecake toffee bonbon pastry soufflé candy canes jelly-o lemon drops gingerbread. Liquorice brownie jelly chocolate oat cake. Gummi bears gummi bears croissant cake dessert. Chupa chups powder candy topping gummies. Halvah croissant cupcake chocolate gingerbread. Wafer shortbread sweet jujubes oat cake candy lollipop tiramisu. Topping cupcake soufflé danish brownie sugar plum candy canes fruitcake ice cream. Lollipop danish dragée croissant sugar plum biscuit oat cake carrot cake pie. Jelly-o marzipan soufflé gummi bears chocolate marzipan sugar plum chupa chups. Tootsie roll soufflé cake tootsie roll gingerbread cheesecake icing gummi bears cupcake.</p>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>Dragée donut sweet cheesecake dragée danish sugar plum fruitcake apple pie. Marzipan lemon drops cupcake gummi bears carrot cake soufflé. Sesame snaps croissant lollipop candy canes croissant cookie macaroon. Cheesecake toffee bonbon pastry soufflé candy canes jelly-o lemon drops gingerbread. Liquorice brownie jelly chocolate oat cake. Gummi bears gummi bears croissant cake dessert. Chupa chups powder candy topping gummies. Halvah croissant cupcake chocolate gingerbread. Wafer shortbread sweet jujubes oat cake candy lollipop tiramisu. Topping cupcake soufflé danish brownie sugar plum candy canes fruitcake ice cream. Lollipop danish dragée croissant sugar plum biscuit oat cake carrot cake pie. Jelly-o marzipan soufflé gummi bears chocolate marzipan sugar plum chupa chups. Tootsie roll soufflé cake tootsie roll gingerbread cheesecake icing gummi bears cupcake.</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>

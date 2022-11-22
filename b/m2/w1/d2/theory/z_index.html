@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+
+    <style>
+        p, div p{
+            font-size: 20em;
+
+        }
+
+        p {
+            padding: 300px 20px 0 20px;
+        }
+
+        code{
+            color: #f00;
+            font-weight: 600;
+        }
+
+        .container{
+            width: 1024px;
+            margin: 0 auto;
+            border: 2px solid #000;
+            position: relative;
+            height: 800px;
+        }
+
+        .container div{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+        }
+
+        #red{
+            background-color: #f00;
+            top: 20px;
+            left: 20px;
+            z-index: 2;                    /* Più alto è il valore che do, più starà sopra*/
+        }
+        #blue{
+            background-color: #00f;
+            top: 40px;
+            left: 40px;
+            z-index: 1;                   /* Più basso è il valore che do, più starà sotto*/
+        }
+        #green{
+            background-color: #0f0;
+            top: 60px;
+            left: 60px;
+            z-index: 1;   /* A parità di z index, segue la regola  del cascade - quindi green prevarrà su blue*/
+        }
+
+        img{
+            position: absolute;
+            left: 100px;
+            top: 0;
+            z-index: -1; /* con -1, finisce sotto a tutto. anche il testo ( vedi h2 ) */
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>La proprietà Z-Index</h2>
+
+    <div class="container">
+
+        <div id="red"></div>
+        <div id="blue"></div>
+        <div id="green"></div>
+
+        <p>Più alto è il valore di <code>Z-Index</code> che do, più starà sopra <br>
+        Più basso è il valore di <code>Z-Index</code> che do, più starà sotto <br>
+        A parità di <code>Z-Index</code>, segue la regola del cascade - quindi green prevarrà su blue <br>  Con <code>Z-Index</code> -1, l'immagine ( fuori dal div, e con <code>Position: Absolute</code> ) finisce sotto a tutto. anche il testo ( vedi h2 ) <br><br><br> <b>Valori possibili</b><br><code>Auto</code> - Valore uguale a tutti i parents <br> <code>Numero</code> - qualsiasi numero intero positivo o negativo <br> <code>Initial</code> - valore di default (0) <br> <code>Inherit</code> - Ereditato dal genitore</p>
+
+    </div>
+
+    <img src="../../d1/theory/assets/images/img_pink_flowers.jpeg" alt="">
+
+</body>
+</html>
