@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Order</title>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;      /* center parent ( row ) */
+            align-items: center;          /* centro items nel parents, che ha 100% height */
+        }
+
+        #container{
+            background-color: #fff;
+            border: 2px solid #000;
+            display: flex;
+            flex-flow: row nowrap;    /*flex flow mette insieme i valori di 2 proprietà. direction e wrap */
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #box1{
+            background-color: #f00;
+            border: 1px solid #000;
+            order: 2;
+            -webkit-order: 2;
+
+        }
+        #box2{
+            background-color: #00f;
+            border: 1px solid #000;
+            order: 3;
+            -webkit-order: 3;
+        }
+        #box3{
+            background-color: #0f0;
+            border: 1px solid #000;
+            order: 1;
+            -webkit-order: 1;
+        }
+
+        #box1, #box2, #box3 {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="container">
+
+        <div id="box1" >Box 1</div>
+        <div id="box2" >Box 2</div>
+        <div id="box3" >Box 3</div>
+
+    </div>
+</body>
+</html>

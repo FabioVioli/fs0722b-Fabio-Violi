@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Gallery</title>
+
+    <style>
+
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            
+            /* repeat = si devono comportare tutto allo stesso modo
+            autofil= riempi tutto
+            minmax = dimensioni immagini minimo
+            1fr = 1 frazione ( guarda il grid sito cssgridplayground) */
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid img{
+            border: 1px solid#ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+
+    <main class="grid">
+
+        <img src="assets/img/22m.jpeg" alt="Sample photo">
+        <img src="assets/img/23m.jpeg" alt="Sample photo">
+        <img src="assets/img/24m.jpeg" alt="Sample photo">
+        <img src="assets/img/25m.jpeg" alt="Sample photo">
+        <img src="assets/img/28m.jpeg" alt="Sample photo">
+        <img src="assets/img/27m.jpeg" alt="Sample photo">
+
+    </main>
+    
+</body>
+</html>
