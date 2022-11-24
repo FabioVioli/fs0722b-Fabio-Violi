@@ -1,0 +1,67 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+#testoAlternato{
+    margin: 250px auto;
+    width: 650px;
+    border: 3px solid black;
+    padding: 1% 1%;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-weight: 600;
+    background-color: grey;
+}
+
+span {
+    color: white;
+}
+
+#a{
+    position: absolute;
+    right: 910px;
+    bottom: 600px;
+    animation-name: animation;
+    animation-duration: 9s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+#b{
+    position: absolute;
+    right: 900px;
+    bottom: 600px;
+    animation-name: animation;
+    animation-duration: 9s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+#c{
+    position: absolute;
+    right: 940px;
+    bottom: 600px;
+    animation-name: animation;
+    animation-duration: 9s;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes animation{
+    0%{color: white; opacity: 0;}  /* inizio*/
+    16%{transform: translateY(30px); color: white;opacity: 1;}  /* translate + comparsa*/
+    33%{transform: translateY(60px); color: white;opacity: 0;}  /* translate + scomparsa*/
+    100%{transform: translateY(0.0); opacity: 0;}  /* translate */
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <style>
+
+        #myDiv{
+
+            margin: auto;
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            animation: mymove linear 5s infinite; /* per prima cosa, occorre dare un nome all'animazione, quindi una timing function, "eventualmente" un delay, itration count ( quante volte si deve ripetere), [fill mode], etc... */
+        }
+
+        @keyframes mymove {
+            /* from */
+            50% {transform: rotate(180deg);}  /* dichiaro lo step intermedio della mia animazione - se mettiamo 100% {transform: rotate(100deg); , complice infinite, ruoterà all'infinito senzatornare indietro*/
+
+            /* to */
+
+            
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h2>Animazione di una trasformazione</h2>
+    <p>gradualmente ruoteremo un div di 180° che poi ritorneremo alla posizione di partenza</p>
+
+    <div id="myDiv">
+        <h1>myDiv</h1>
+    </div>
+</body>
+</html>

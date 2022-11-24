@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+
+        div.a{
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            transform: rotate(20deg);
+        }
+
+        div.b{
+            width: 150px;
+            height: 80px;
+            background-color: red;
+            transform: skewx(200deg);  /* skewx  ( asse x ), skewy ( asse y), skew ( doppio valore) per entrambi. Parte di default con i lati in basso. usa valori negativi per i lati opposti ( ex -200deg ) */
+        }
+
+        div.c{
+            width: 150px;
+            height: 80px;
+            background-color: blue;
+            transform: scaleX(1.5); /* come skew, può avere i valori X, Y o entrambi ( doppio valore richiesto tra le tonde ) */
+        }
+
+        div.box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            transform: rotate(45deg) scale(0.3);
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>La proprietà transform</h2>
+
+
+    <h2>transform rotate</h2>
+    <div class="a">Rotate</div>
+
+
+    
+    <h2>transform skew</h2>
+    <div class="b"></div>
+
+
+
+    <h2>transform scale</h2>
+    <div class="c"></div>
+
+
+    <h2>TRANSFORMATIONS!!!</h2>
+    <div class="box"></div>
+</body>
+</html>
