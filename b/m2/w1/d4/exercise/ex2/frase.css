@@ -20,7 +20,8 @@
 }
 
 span {
-    color: white;
+    color: red;
+
 }
 
 #a{
@@ -28,10 +29,11 @@ span {
     right: 910px;
     bottom: 600px;
     animation-name: animation;
-    animation-duration: 9s;
+    animation-duration: 6s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    opacity: 0;
     
 }
 
@@ -40,8 +42,8 @@ span {
     right: 900px;
     bottom: 600px;
     animation-name: animation;
-    animation-duration: 9s;
-    animation-delay: 3s;
+    animation-duration: 6s;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     opacity: 0;
@@ -52,16 +54,16 @@ span {
     right: 940px;
     bottom: 600px;
     animation-name: animation;
-    animation-duration: 9s;
-    animation-delay: 6s;
+    animation-duration: 6s;
+    animation-delay: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     opacity: 0;
 }
 
 @-webkit-keyframes animation{
-    0%{color: white; opacity: 0;}  /* inizio*/
-    16%{transform: translateY(30px); color: white;opacity: 1;}  /* translate + comparsa*/
-    33%{transform: translateY(60px); color: white;opacity: 0;}  /* translate + scomparsa*/
+    0%{color: red; opacity: 0;}  /* inizio*/
+    16%{transform: translateY(30px); color: red;opacity: 1;}  /* translate + comparsa*/
+    33%{transform: translateY(60px); color: red;opacity: 0;}  /* translate + scomparsa*/
     100%{transform: translateY(0.0); opacity: 0;}  /* translate */
 }

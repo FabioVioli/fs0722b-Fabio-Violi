@@ -84,6 +84,7 @@ h3{
     }
 
 .postit:hover{
+    transition: 1s;
     transform: rotate(0deg) scale(1.3); box-shadow:2px 2px 5px black;
     z-index: 2;
 }
