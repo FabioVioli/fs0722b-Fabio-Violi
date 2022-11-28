@@ -215,9 +215,6 @@ nav{
         background-color: #ffc017;;
     }
 
-    #header-right{
-    }
-
     #wat > #header-right > svg{
         display: unset;
         background-color: #ffc017;
@@ -617,9 +614,6 @@ nav{
         font-weight: 900;
     }
 
-    .art-header{
-
-    }
 
     .art-header{
         font-size: 1.3em;
@@ -641,5 +635,5 @@ nav{
         height: 120px;
     }
 }
-    }
-    
+
+}
