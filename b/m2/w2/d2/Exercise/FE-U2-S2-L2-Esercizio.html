@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+
+    <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
+
+In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
+
+Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
+
+
+Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
+
+Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
+Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
+
+Esercizi:
+
+1) Implementa una navbar con questi elementi di menu:
+Home
+Saldi
+Welcome Summer
+Last Minute
+Recensioni
+
+Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
+
+2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
+
+3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
+una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
+
+Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
+
+4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
+
+5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+In questa sezione dovranno esserci:
+
+6 card per destinazioni per linea a schermo extra large
+3 card per destinazioni per linea a schermo grande (desktop)
+2 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)
+
+6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+l'immagine avrà i bordi arrotondati e un'ombra leggera
+per il contenuto: il nome dovrà essere più grande del resto,
+le date dovranno essere formattate con font "monospace",
+il prezzo dovrà essere definito come "lead"
+e il badge sarà scuro
+
+
+7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+
+8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+
+10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+</head>
+
+
+
+    <body>
+                <!------------------------------------------------ INIZIO NAV ------------------------------------------>
+        <nav class="bg-light mb-5 ps-5 d-flex justify-content-around">
+            <img src="assets/salvini.jpg" alt="" class="w-25">
+
+            <div class="dropdown ">
+                <a class="btn btn-light border dropdown-toggle w-75" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list"></i>
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+        </nav>
+            <!------------------------------------------------ FINE NAV ------------------------------------------>
+            <!------------------------------------------------ INIZIO HEADER ------------------------------------------>
+        <main>
+            <div class="container d-flex justify-content-center text-secondary mb-5 m-0">
+                <header class="bg-light w-75 text-center">
+                    <h1 class="fw-light">Salvini-Airline <br> - <br><span class="fs-6 fw-light">Vacanze, a casa vostra!</span></h1>
+                    <hr>
+                    <h3 class="text-center mb-5 fw-light">Scopri le destinazioni più calde del momento</h3>
+                    <button type="button" class="btn btn-info text-white fs-6 mb-5 fw-semibold">Prenota Ora</button>
+                </header>
+            </div>
+            <!------------------------------------------------ FINE HEADER ------------------------------------------>
+            <!------------------------------------------------ INIZIO MAIN ------------------------------------------>
+            <!------------------------------------------------ INIZIO SALDI ------------------------------------------>
+
+            <div class="container row m-0 d-flex justify-content-center mb-5">
+                <div class="d-flex justify-content-between">
+                    <h4 class="ps-3">Saldi</h4>
+                    <p class="text-info pe-3">nascondi sezione</p>
+                </div>
+                
+                <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3" alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+                  
+            </div>
+            <!------------------------------------------------ FINE SALDI ------------------------------------------>
+            <div class="container row m-0 p-0 d-flex justify-content-center mb-5">
+                <div class="d-flex justify-content-between">
+                    <h4 class="ps-3">Saldi</h4>
+                    <p class="text-info pe-3">nascondi sezione</p>
+                </div>
+                
+                <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3" alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-0 0 " alt="...">
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-5 m-2 border border-info">
+                    <div>
+                    <img src="assets/salvini.jpg" class="card-img-top mb-3 mx-2 " alt="...">
+                    </div>
+
+                    <div class="card-body p-0 d-flex flex-column justify-content-between">
+                      <div>   
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>  
+                      <a href="#" class="btn btn-info w-50 p-1 mb-3">Prenota</a>
+                    </div>
+                  </div>
+            </div>
+
+            <!----------------------------------INIZIO OFFERTA DEL GIORNO  -------------------------------------->
+            
+            <div class="container m-0">
+                
+              <h4 class="ms-3 mb-3">Offerta del giorno</h4>
+                <div class="m-0 p-0 row">
+                    <div class="col-6">
+                    <img src="assets/salvini.jpg" alt="" class="w-100 mb-5">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="fs-1">Fushifaru Maldives</h4>
+                        <p>15.01.2021 - 31.01.2021</p>
+                        <p class="mb-3"> Ville a partire da 500€, non fartele sfuggire</p>
+                        <button type="button" class="btn btn-dark text-white p-0 pe-1 ps-1 fs-6 rounded-pill">Best Offer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container m-0 p-0 mb-5">
+              <h3 class="ms-4">Last Minute</h3>
+
+              <div class="d-flex justify-content-around flex-wrap">
+                <div class="col-6 d-flex justify-content-center"><img src="assets/salvini.jpg" class="card-img-top mb-3 w-75" alt="..."></div>
+                <div class="col-6 d-flex justify-content-center"><img src="assets/salvini.jpg" class="card-img-top mb-3 w-75" alt="..."></div>
+                <div class="col-6 d-flex justify-content-center"><img src="assets/salvini.jpg" class="card-img-top mb-3 w-75" alt="..."></div>
+                <div class="col-6 d-flex justify-content-center"><img src="assets/salvini.jpg" class="card-img-top mb-3 w-75" alt="..."></div>
+                <div class="col-6 d-flex justify-content-center"><img src="assets/salvini.jpg" class="card-img-top mb-3 w-75" alt="..."></div>
+                <div class="col-6 d-flex justify-content-center"><img src="assets/salvini.jpg" class="card-img-top mb-3 w-75" alt="..."></div>
+
+              </div>
+            </div>
+            
+            <h4 class="text-center mb-3">Dicono di noi</h4>
+            <div class="container m-0">
+              <div class="row">
+                <div class=" offset-1 col-2">
+                <img src="assets/salvini.jpg" alt="" class="w-75 rounded-circle">
+                </div>
+                <div class="col-8">
+                  <h6>Username</h6>
+                  <p>Jelly jelly-o jelly beans cotton candy chupa chups apple pie chocolate bar cupcake. Tootsie roll macaroon danish tootsie roll lollipop cookie cotton candy. Cotton candy cotton candy tart bear claw marshmallow. Cookie sweet roll cake croissant donut soufflé cake. Jelly-o tart cake gummi bears tiramisu. Candy biscuit powder jelly cotton candy chocolate cake dessert. Halvah marshmallow jelly macaroon chupa chups cupcake gummi bears lemon drops. Donut powder lollipop chocolate bar sugar plum jelly beans topping cookie. Chocolate sweet roll pie sugar plum caramels bonbon candy canes gummies. Jujubes icing shortbread tart bear claw soufflé.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class=" offset-1 col-2">
+                <img src="assets/salvini.jpg" alt="" class="w-75 rounded-circle">
+                </div>
+                <div class="col-8">
+                  <h6>Username</h6>
+                  <p>Jelly jelly-o jelly beans cotton candy chupa chups apple pie chocolate bar cupcake. Tootsie roll macaroon danish tootsie roll lollipop cookie cotton candy. Cotton candy cotton candy tart bear claw marshmallow. Cookie sweet roll cake croissant donut soufflé cake. Jelly-o tart cake gummi bears tiramisu. Candy biscuit powder jelly cotton candy chocolate cake dessert. Halvah marshmallow jelly macaroon chupa chups cupcake gummi bears lemon drops. Donut powder lollipop chocolate bar sugar plum jelly beans topping cookie. Chocolate sweet roll pie sugar plum caramels bonbon candy canes gummies. Jujubes icing shortbread tart bear claw soufflé.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class=" offset-1 col-2">
+                <img src="assets/salvini.jpg" alt="" class="w-75 rounded-circle">
+                </div>
+                <div class="col-8">
+                  <h6>Username</h6>
+                  <p>Jelly jelly-o jelly beans cotton candy chupa chups apple pie chocolate bar cupcake. Tootsie roll macaroon danish tootsie roll lollipop cookie cotton candy. Cotton candy cotton candy tart bear claw marshmallow. Cookie sweet roll cake croissant donut soufflé cake. Jelly-o tart cake gummi bears tiramisu. Candy biscuit powder jelly cotton candy chocolate cake dessert. Halvah marshmallow jelly macaroon chupa chups cupcake gummi bears lemon drops. Donut powder lollipop chocolate bar sugar plum jelly beans topping cookie. Chocolate sweet roll pie sugar plum caramels bonbon candy canes gummies. Jujubes icing shortbread tart bear claw soufflé.</p>
+                </div>
+              </div>
+            </div>
+
+        </main>
+
+        <footer>
+
+          <div class="container bg-dark row text-center m-0">
+        
+            <button type="button" class="btn btn-dark text-secondary border-secondary mt-4 mb-3 col-3 mx-auto">Contattaci</button>
+            <p class="text-white">©2021 Kalina Travel LTD. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      
+    </body>
+
+
+
+</html>

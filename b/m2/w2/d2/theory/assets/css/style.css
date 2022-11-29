@@ -1,0 +1,10 @@
+.active>.page-link, .page-link.active {
+
+    background-color: black;
+    border-color: black;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: red;
+
+}
