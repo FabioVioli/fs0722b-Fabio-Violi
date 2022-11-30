@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'buttons';
+@import 'nav';
+@import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
+body{
+    margin: 0;
+}
+
+header{
+    background-color: $bg-color;
+    height: 80vh;
+    display: flex;
+}
+
+#brand{
+    display: flex;
+    align-items: center;
+    img{
+        width: 250px;
+        height: 100px;
+        margin-right: $nav-margin;
+        span{
+            display: flex;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+#banner-text{
+    max-width: 50%;
+    margin: auto auto;
+    h1{
+        font-size: 6em;
+    }
+    h3{
+        font-size: 2em;
+    }
+}
+#banner-img{
+    margin: auto auto;
+    max-width: 50%;
+}

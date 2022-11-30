@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="partials-main/main.css">
+</head>
+<body>
+    
+
+    <!-- le variabili in sass, tipizzate dinamicamente 
+
+    Valori possibili?   => numero, 1,2,3 10px, 2em
+                        => stringhe di testo ('hello', "goodbie", ciao => anche senza apici, perché non collide con altri tipi di variabili )
+                        => colore ( red, blue, #ffcc00, rgba(10,0,230,0.5)) 
+                        => true, false ( boleans )
+                        => null
+                        => lista di valori (5px, 5px 10px, oppure Helvetica, Arial, sans-serif)
+                        => mappa chiave/valore. => ex (nome: Federico, cognome: De Ambrosis )
+                                                => ($set-color:(grey:#ccc, blue: #00f))
+
+    Le variabili servono, come sempre, a memorizzare dei valori
+    I valori corrisponderanno ai parametri delle regole di stile
+    Imposto una variabile, la utilizzo in una specifica proprietà e la assegno al selettore
+    tipicamente, le variabili non vengono riassegnate, ma hanno una natura più vicina alle costanti
+
+    esempio
+
+    $main-margin-top: 30px  => nello stile, questo parametro può essere ripetuto per più elementi
+                            => se modifico il valore di SASS, intervengo solo una volta sulla variabile,
+                               ma modifico tutti i valori delle diverse proprietà nei selettori.
+
+    button {margin-top: $main-margin-top}
+    .left {margin-top: $main-margin-top}
+    h1 {margin-top: $main-margin-top}
+
+    SASS utilizza operatori logici, operatori di comparazione, operatori numerici
+
+    == e != ( uguale e diverso )
+
+    + - * / ( operatori matematici )
+
+    2px === 2px
+    2px > 1px
+
+    NON UTILIZZA operatore modulo ( % ) e assegnazione ( x = 10 )
+
+    sass accetta le stringhe sia con apici singoli, doppi o senza apici. 
+    Il doppio apice è necessario quando il valore si compone tipo
+
+    p {font-family: "Times New Roman", Georgia, Serif}
+
+    mappe
+    sono chiave valore
+    $map (k1:v1, k2:v2)  > coppie chiuse tra parentesi e separate da virgole
+    Le mappe sono immutabili se una funzione manipola una mappa. Non aggiorna quindi la vecchia, ma ne crea una nuova.
+
+    documentazione
+    https://sass-lang.com/documentation/variables
+
+
+    ////////////////////
+    //////PARTIALS//////
+    ////////////////////
+
+
+    SASS ci permette di lavorare su singolo piccoli file che si occupano di specifiche porzioni di codice
+    i singoli partials poi possono essere ricombinati in un unico CSS
+
+    Questo rende il lavoro più modulare ( più facilmente gestibile )
+
+    sintassi => un file partials si distingue perché prevede un _iniziale
+    _header.scss  => si potrebbe occupare di formattare le proprietà child del tag <header>
+    _footer.scss  => si potrebbe occupare di formattare le proprietà child del tag <footer>
+
+    all'interno dei file partials, ovviamente, la sintassi sarà la medesima di SASS ( come ogni file.scss )
+
+    dovendo mettere insieme tutti questi "pezzi", avrò un file .scss principale che incorpora gli altri partials.
+
+    Possiamo gestirlo come ci pare:
+    
+    a) incorporare solo partials
+    b) ospitare sia partials che CSS
+
+    L'importante è che la sintassi usata nel file SCSS principale sia @import 'nome_del_file_partials.scss'
+
+    ex: @import 'header';
+        $color: red;
+        body{background-color: $color}
+        @import 'footer';
+
+    ps: faccio un file variables.scss nel quale metto tutte le variabili.
+-->
+
+<div class="container "><h1>HEY</h1></div>
+
+<button class="btn">premimi</button>
+</body>
+</html>

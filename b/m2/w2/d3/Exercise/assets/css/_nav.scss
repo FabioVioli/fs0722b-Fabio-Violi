@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: $bg-color;
+    border-bottom: 3px solid black;
+    font-family: 'Sassy Frass', cursive;
+    font-size: 4em;
+    font-weight: 900;
+    
+    ul{
+        display: flex;
+        li{
+            display: flex;
+            align-self: center;
+            list-style: none;
+            margin-right: $nav-margin;
+            a{
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    color: red;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

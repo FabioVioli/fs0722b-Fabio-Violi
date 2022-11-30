@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap");
+button {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  margin-right: 60px;
+  font-size: 1.2em;
+  background-color: rgb(176, 255, 102);
+  font-weight: bold;
+}
+button #button-a, button #button-b {
+  transition: 10s;
+}
+
+button:hover {
+  color: black;
+  transform: scale(1.3);
+  background-color: red;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 174, 67);
+  border-bottom: 3px solid black;
+  font-family: "Sassy Frass", cursive;
+  font-size: 4em;
+  font-weight: 900;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  display: flex;
+  align-self: center;
+  list-style: none;
+  margin-right: 40px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+nav ul li a:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(255, 174, 67);
+  height: 80vh;
+  display: flex;
+}
+
+#brand {
+  display: flex;
+  align-items: center;
+}
+#brand img {
+  width: 250px;
+  height: 100px;
+  margin-right: 40px;
+}
+#brand img span {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+#banner-text {
+  max-width: 50%;
+  margin: auto auto;
+}
+#banner-text h1 {
+  font-size: 6em;
+}
+#banner-text h3 {
+  font-size: 2em;
+}
+
+#banner-img {
+  margin: auto auto;
+  max-width: 50%;
+}/*# sourceMappingURL=main.css.map */

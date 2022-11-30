@@ -1,0 +1,21 @@
+button{
+    padding: $button-padding;
+    border-radius: $button-radius;
+    border: none;
+    margin-right: $button-margin;
+    font-size: $button-font;
+    background-color: $button-bg;
+    font-weight: $button-weight;
+    
+    #button-a, #button-b{
+        transition: 10s;
+    }
+
+}
+button:hover{
+    color: $button-ht;
+    transform: $button-size;
+    background-color: $button-bg-h;
+
+
+}
