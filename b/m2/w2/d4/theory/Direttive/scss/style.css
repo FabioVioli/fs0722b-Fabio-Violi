@@ -1,0 +1,82 @@
+/* EXTEND */
+.box, .box:hover {
+  border: 1px solid #000;
+  background-color: rgb(133, 255, 133);
+  margin-bottom: 10px;
+  width: 200px;
+}
+.box:hover {
+  font-size: 10px;
+}
+
+/* PLACEHOLDER (keyword %) */
+.mySecondBox, .myFirstBox { /* il nome a scelta */
+  border: 1px solid #000;
+  background-color: blue;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.mySecondBox:hover, .myFirstBox:hover {
+  background-color: red;
+}
+
+.myFirstBox {
+  font-size: 10px;
+}
+.myFirstBox:hover {
+  transform: scale(1.3);
+}
+
+/* MIXIN */
+button.green {
+  /* devi dare un nome- vsc suggerisce  di darlo con @mixin */
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: green;
+  outline: 1px solid green;
+  box-shadow: 0 0 10px green;
+  color: white;
+  border: 1px solid white;
+}
+button.green:hover {
+  color: green;
+  background: white;
+  box-shadow: none;
+}
+
+button.red {
+  /* devi dare un nome- vsc suggerisce  di darlo con @mixin */
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: red;
+  outline: 1px solid red;
+  box-shadow: 0 0 10px red;
+  color: white;
+  border: 1px solid white;
+}
+button.red:hover {
+  color: red;
+  background: white;
+  box-shadow: none;
+}
+
+button.blue {
+  /* devi dare un nome- vsc suggerisce  di darlo con @mixin */
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: blue;
+  outline: 1px solid blue;
+  box-shadow: 0 0 10px blue;
+  color: white;
+  border: 1px solid white;
+}
+button.blue:hover {
+  color: blue;
+  background: white;
+  box-shadow: none;
+}/*# sourceMappingURL=style.css.map */

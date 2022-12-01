@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Direttive</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    
+<!----------------------------------EXTEND----------------------------------->
+<!-- lo uso nel caso in cui un selettore erediti caratteristiche di un altro, con l'aggiunta di alcune specifiche 
+ad esempio, prendo -titolo che ha font-size: 2em, e .sottotitolo che ha font-size: 2em, + italic -->
+
+<!-- @extend indica al compilatore che una classe eredita tutte le proprietà di un'altra precedentemente definita -->
+
+<div class="box">box</div>          <!-- box definisce bordo e colore-->
+<div class="myBox">myBox</div>      <!-- myBox definisce un font-size-->
+
+
+<!--------------------------------PLACEHOLDER-------------------------------->
+<!-- lo uso quando può essere utile definire una classe che ha il solo scopo di essere estesa. Una sorta di "base" di quelel che saranno n versioni che andrò poi a creare -->
+
+<!-- la sintassi prevede di usare un segnaposto % (placeholder) che definisce uno stile che non viene stampato ma solo esteso -->
+
+<!-- esempio keyword % -->
+
+<div class="myFirstBox">my first box</div>
+<div class="mySecondBox">my second box</div>
+
+
+<!-------------------------------------MIXINS---------------------------------->
+<!-- a volte @extend non è sufficiente a rendere automatiche diverse modifiche insieme -->
+<!-- 
+<style>
+
+    /* .button{
+        padding: 10px 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        background-color: green;
+        border: 1px solid white;
+        outline:  0 0 10px green;
+        box-shadow: 0 0 10px green;
+        color: white;
+        &:hover {
+            color:green;
+            background: white;
+            box-shadow: none;
+        }
+    }
+
+    button{
+        @extend .button;
+    }
+
+    se devo fare una versione di colore diverso 
+
+    .button.red {
+        @extend .button {
+            background: red;
+            outline: 1 px solid red;
+            box-shadow: 0 0 10px red;
+            &hover: {
+                color: red;
+            }
+        }
+    } 
+    
+    @mixin => crea gruppi di proprietà css che si ripetono all'interno del foglio di stile, che ci da la possibiltià di applicare dei parametri arbitrari a piacere.
+
+    volendo fare un parallelo con JS, è come quando passiamo una serie di argomenti a una funzione.
+    
+</style>*/
+ -->
+
+ <button class="red">hello</button>
+ <button class="blue">hello</button>
+ <button class="green">hello</button>
+</body>
+</html>

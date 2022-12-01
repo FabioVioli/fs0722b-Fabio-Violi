@@ -1,0 +1,74 @@
+/* EXTEND */
+
+.box{
+    border: 1px solid #000;
+    background-color: rgb(133, 255, 133);
+    margin-bottom: 10px;
+    width: 200px;
+    &:hover{
+        @extend .box;
+        font-size: 10px;
+    }
+}
+
+
+
+/* PLACEHOLDER (keyword %) */
+
+%box2{              /* il nome a scelta */
+    border: 1px solid#000;
+    background-color: blue;
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+}
+
+%box2:hover{
+    background-color: red;
+}
+
+.myFirstBox{
+    @extend %box2;
+    font-size: 10px;
+    &:hover{
+        transform: scale(1.3)
+    }
+}
+
+.mySecondBox{
+    @extend %box2;
+}
+
+/* MIXIN */
+
+@mixin baseButton($bgColor) {  /* devi dare un nome- vsc suggerisce  di darlo con @mixin */
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+
+    background: $bgColor; //green
+    outline: 1px solid $bgColor; // green
+    box-shadow:  0 0 10px $bgColor; //green
+
+    color: white;
+    border: 1px solid white;
+
+        &:hover{
+            color: $bgColor;
+            background: white;
+            box-shadow: none;
+        }
+
+}
+
+button.green{
+    @include baseButton(green);
+}
+
+button.red{
+    @include baseButton(red)
+}
+
+button.blue{
+    @include baseButton(blue)
+}

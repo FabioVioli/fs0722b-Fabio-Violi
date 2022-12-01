@@ -47,11 +47,11 @@ nav ul li a:hover {
 
 body {
   margin: 0;
+  background-color: rgb(255, 174, 67);
+  height: 100vh;
 }
 
 header {
-  background-color: rgb(255, 174, 67);
-  height: 80vh;
   display: flex;
 }
 

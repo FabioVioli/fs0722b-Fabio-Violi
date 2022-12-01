@@ -2,13 +2,16 @@
 @import 'buttons';
 @import 'nav';
 @import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
+
 body{
     margin: 0;
+    background-color: $bg-color;
+    height: 100vh;
+
 }
 
 header{
-    background-color: $bg-color;
-    height: 80vh;
+
     display: flex;
 }
 

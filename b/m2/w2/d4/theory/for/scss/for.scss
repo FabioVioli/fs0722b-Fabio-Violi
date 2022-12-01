@@ -1,0 +1,6 @@
+@for $m from 1 through 5 {  // avessimo messo to invece di through, si sarebbe fermato al 4
+    .p#{$m}{
+        padding-left: $m * 12px;
+        color: green;
+    }
+}
