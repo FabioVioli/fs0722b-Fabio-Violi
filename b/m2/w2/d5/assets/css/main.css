@@ -1,0 +1,117 @@
+#nav, footer, #h-button {
+  background-color: #7223f2;
+}
+
+#brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#navbarSupportedContent ul li a {
+  color: red;
+  font-size: 1.1em;
+  margin-right: 7px;
+}
+#navbarSupportedContent ul li:first-child a {
+  color: white;
+}
+
+header {
+  text-align: center;
+}
+
+#h1 {
+  font-size: 1.6em;
+  padding-top: 15px;
+  font-weight: 600;
+}
+
+#city {
+  background-image: url("../img/pexels-aleksandar-pasaric-325185.jpg");
+  height: 70vh;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    text-align: start;
+  }
+  #h1 {
+    font-size: 2.1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #h1 {
+    font-size: 2.6em;
+    font-weight: 400;
+  }
+  #city {
+    height: 55vh;
+  }
+}
+h4 {
+  font-size: 1.1em;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+#h-button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+}
+
+#bg-main-1 {
+  background-color: #f5f5f5;
+}
+
+#bg-main-2 {
+  background-image: url(../img/svg/svg.svg);
+}
+
+.lorem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lorem > p {
+  font-size: 1.2em;
+  margin: 0 10%;
+  margin-bottom: 15px;
+}
+
+.part-div {
+  margin-bottom: 45px;
+}
+
+.p-img {
+  width: 25%;
+}
+
+#carousel {
+  display: none;
+}
+
+.c-img {
+  width: 25%;
+}
+
+@media screen and (min-width: 768px) {
+  .c-img {
+    width: 10%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #carousel {
+    display: unset;
+  }
+  #sec-2 {
+    display: none;
+  }
+}
+#foot ul li {
+  list-style: none;
+  line-height: 2em;
+}/*# sourceMappingURL=main.css.map */
