@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object this</title>
+</head>
+<body>
+    
+    <script>
+        var teacher = {
+            name: "Federico",
+            surname: "De Ambrosis",
+            sayHello: function(){
+                document.write("Hello World, I`m " + this.name + " " + this.surname);
+            }
+
+        }
+
+        teacher.sayHello();
+
+        // possiamo bypassare this accedendo a una variabile esterna => rende il codice instabile
+        // NON FARE PERCHÈ INSTABILE
+        let user = {
+            name: "John",
+            age: 30,
+
+            sayHi(){
+                document.write(user.name); // accedo alla variabile esterna anziché usare this
+            }
+        };
+
+        user.sayHi();
+        // NON FARE PERCHÈ INSTABILE
+        // let adming = user;
+        // user = null; // sovrascrivo user. quindi quando proviamo a stampare 
+        // admin.sayHi(); // darà errore, in quanto non possiamo leggere la proprietà name di null.
+
+        // this => può essere usata in qualsiasi funzione, anche se non è il metodo di un oggetto
+
+        function sayHi(){
+            document.write(this.name); // non restituisce alcun errore di sintassi
+            // => this viene valutato al momento dell'esecuzione e può avere un qualsiasi valore.
+        }
+
+        sayHi(); // undefined => anche in modalità strict. Se cerchiamo di accedere a this.name => errore
+
+        // LE ARROW FUNCTION NON HANNO THIS
+    </script>
+</body>
+</html>

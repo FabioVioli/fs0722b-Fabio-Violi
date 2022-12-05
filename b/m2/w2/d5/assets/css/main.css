@@ -1,4 +1,6 @@
-#nav, footer, #h-button {
+#nav,
+footer,
+#h-button {
   background-color: #7223f2;
 }
 
@@ -30,11 +32,15 @@ header {
   background-image: url("../img/pexels-aleksandar-pasaric-325185.jpg");
   height: 70vh;
   background-size: cover;
+  padding-top: 15%;
 }
 
 @media screen and (min-width: 768px) {
   header {
     text-align: start;
+  }
+  #city {
+    padding-top: 8%;
   }
   #h1 {
     font-size: 2.1em;
@@ -47,6 +53,17 @@ header {
   }
   #city {
     height: 55vh;
+    padding-top: 5%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #city {
+    height: 75vh;
+  }
+}
+@media screen and (min-width: 2560px) {
+  #city {
+    height: 100vh;
   }
 }
 h4 {
@@ -77,7 +94,8 @@ h4 {
 }
 
 .lorem > p {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  text-align: center;
   margin: 0 10%;
   margin-bottom: 15px;
 }
@@ -87,7 +105,7 @@ h4 {
 }
 
 .p-img {
-  width: 25%;
+  width: 75%;
 }
 
 #carousel {
@@ -109,6 +127,9 @@ h4 {
   }
   #sec-2 {
     display: none;
+  }
+  .p-img {
+    width: 45%;
   }
 }
 #foot ul li {

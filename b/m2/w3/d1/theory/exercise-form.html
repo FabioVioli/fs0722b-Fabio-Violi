@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- 1) Definisci gli elementi html -->
+
+    <form action="">
+        <input type="text" name="" placeholder="username" id="usr">
+        <input type="password" placeholder="password" id="pwd">
+        <button id="btn">Login</button>
+    </form>
+
+        <div id="target1"></div>
+        <div id="target2"></div>
+    <script>
+
+
+        // 5) defimniamo la il costruttore user
+
+        function User(){  
+
+            this.name = "";
+            this.accessID = -1;
+        }
+
+        User.prototype.userType = {} || null; // 5.1) estende l'oggetto con prototype ( sarà usato solo per Admin )
+
+        // 5.2) definiamo Admin ( )
+        function Admin(){
+            this.id = "ADMIN";
+            this.access = "unlimited";
+        }
+
+        // 3) dichiarmiamo l'event handler
+        let eventHandler = {
+            CLICK: 'click',
+            MOUSE_OVER: "mouseover",
+            MOUSE_OUT: "mouseout"
+        }
+
+    // 2) dichiarmiamo tutte le variabili, facendo riferimento agli ID che abbiamo fornito in html
+    let btn = document.getElementById('#btn');
+    let usr = document.querySelector('#usr');
+    let pwd = document.querySelector('#pwd');
+    let target1 = document.querySelector('#target1');
+    let target2 = document.querySelector('#target2');
+
+    // 4) aggiungiamo i 2 event listener
+
+    btn.addEventListener(eventHandler.CLICK, logIn); // al click, esegue la funzione login
+
+    usr.addEventListener(eventHandler.MOUSE_OVER, onMouseOver);
+
+        function logIn(e){
+            if(usr.value == "user" && pwd.value == "123"){
+                user.accessID = 0;
+                user.userType = null; // se è user, setta la proprietà userType a Null
+        }else if ( usr.value == "admin" && pwd.value == "123"){
+                ser.accessID = 1;
+                user.userType = new Admin (); // Se è admin, setta la proprietà userType con il nuovo oggetto "new ADMIN"
+        }else{
+        // terzo caso
+                user.accessID = -1;
+                user.userType = null; // se è user, setta la proprietà type a null.
+        }    
+
+        user.name = usr.value;
+        console.log(user);
+    
+        if(user.accessID > -1){
+            target1.innerHTML = "Benvenuto " + user.name;
+            target2.innerHTML = "";
+        }else{
+            target1.innerHTML = "User o pwd errate";
+            target2.innerhtml = "";
+        }
+
+
+        if( user && user.userType){
+            if(user.userType.id == "Admin"){
+                console.log(user.userType.id);
+                target2.innerHTML = "<h2>Ruolo Admin </h2>"
+            }else{  // codice per svuotare
+                target2.innerhtml = "";
+
+            }
+        }
+
+    }
+
+    function onMouseOver(e){
+        e.target.title = "Inserisci il valore corretto";
+    }
+
+    </script>
+</body>
+</html>

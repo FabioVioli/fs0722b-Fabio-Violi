@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Metodi Condivisi</title>
+</head>
+<body>
+    <!-- tii di dato primitivi => strutture semplici => asegno un valore a una variabile -->
+
+    <!-- Gli oggetti, invece, sono strutture complesse => quando assegno un oggetto a una variabile, questo non fa in modo che la variabile contenga "effettivamente" l'oggetto, ma contiene un "riferimento" all'oggetto. -->
+
+    <script>
+
+        var x = 10;  // x è 10
+        var y = x;
+        y = y+1; // y è 11 => incrementare di 1 non ha influito sul valore di x
+
+        // dati primitivi => ciascuna variabile contiene il valore assegnato.
+
+        var persona = {nome: "Mario", cognome: "Rossi"};
+        var altraPersona = persona;
+        altraPersona.nome = "Giuseppe";
+
+        // se proviamo ad accedere alla proprietà nome dell'oggetto persona, scopriremo che anch'essa avrà valore "Giuseppe".
+        // Poiché sia "persona" sia "altraPersona" contengono un riferiment allo stesso oggetto, e per questo motivo ogni modifica alla variabile persona, si riflette anche su altraPersona.
+
+        // toString() e valueOf() sono metodi condivisi da tutti gli oggetti.
+
+        // toString() restituisce una versione string dell'oggetto.
+        var x = new Object(32);
+        x.toString();       // restituisce "32"
+        // se l'oggetto non è riconducibile a un tipo di dato primitivo, mi verrà restituito [object Object]
+        // ad esempio
+        // var persona = new Object ({nome: "Mario", cognome: "Rossi"});
+        // persona.toString();  
+        // restituirà [object Object];
+
+        var x = new Object (32);
+        x.valueOf()  // 32 - se non ci fosse stato un dato primitivo, ci avrebbe restituito l'oggetto intero.
+    </script>
+</body>
+</html>

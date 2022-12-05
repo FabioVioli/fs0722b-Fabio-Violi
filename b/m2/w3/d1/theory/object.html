@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    <!-- tipi di dato primitivi ( stringhe, numberi, booleani, etc... ). ciò che non è dato primitivo è un oggetto.
+    
+    un oggetto è un contenitore di dati eterogenei che forma una struttura dati unica
+    oggetti => dati detti proprietà => coppie nome/valore.
+            => funzionalità ( metodi ) => rappresentati da funzioni -->
+
+
+
+    <script>
+        var oggettoVuoto = {}  // dichiaro un oggetto vuoto => annotazione letterale ( usa le parentesi graffe).
+
+        // più comunemente metteremo proprietà al suo interno.
+        var persona ={"nome": "Mario","cognome":"Rossi"} 
+        // Inserisco proprietà, ovvero coppie nome/valore.
+
+        var persona = {nome: "Mario", cognome: "Rossi"} // i doppi apici sono opzionali, perché non contravvengo a nessuna regola di naming.
+
+        var persona = {"primo-nome": "Mario", "secondo.nome": Rossi} // CONTRAVVENGO alle regole di naming quindi devo usare "".
+
+        // una proprietà può avere come valore qualsiasi espressione derivante da un'espressione javascript, COMPRESo un altro oggetto.
+
+        var persona = {
+            nome: "mario",
+            cognome: "Rossi",
+            indirizzo: {    // la proprietà indirizzo èa a sua volta un oggetto composto da specifiche proprietà.
+                via: "Via Roma",
+                numero: 1,
+                cap: 20100
+            }
+        }
+
+        //accedere alle proprietà di un oggetto.
+        // dot notation => oggetto.proprietà.
+
+        var nome = persona.nome;    // approccio più utilizzato, è più compatto, familiare con altri linguaggi di programmazione.
+        var nome = persona["nome"]; // altro approccio => obbligatorio quando il nome della proprietà non segue le regole di naming.
+
+        // se provo ad accedere a una proprietà di un oggetto che non definita, non verrà generato un errore. Mi verrà restituito invece undefined.
+
+        var eta = persona.eta; // sarà undefined, non essendo definita nell'oggetto sopra.
+
+        // creazione per definizione.
+        // assegnamo un valore a una proprietà non definita => creiamo una nuova proprietà inizializzandola con un valore.
+
+        persona.eta = 42;
+
+        // questo ci suggerisce che gli oggetti sono entità dinamiche, che possono evolversi, o modificarsi, durante l'esecuzione di uno script.
+        //l'oggetto avrà una rappresentazione di base che potrà essere arricchita via via con le proprietà che vogliamo.
+
+        // se le proprietà rappresentano dei dati, i METODI rappresentano le attività che un oggetto può compiere.
+
+        function visualizzaNomeCognome (){return "Mario Rossi";} // una funzione che restituisce una stringa.
+        persona.nomeCognome = visualizzaNomeCognome; // assegnamo il nome della funzione a una nuova proprietà dell'oggetto Persona.
+
+        //assegnamo alla proprietà la funzione, tramite il suo nome ( non il risultato della chiamata alal funzione ).
+
+        // la proprietà nomeCognome contiene uan funzione, e quindi è un metodo.
+
+        var personaCognome = persona.nomeCognome() // per eseguirlo faccio riferimento ad esso con le ()  ( come la chiamata a una funzione )
+
+        persona.nomeCognome = function () {return "Mario Rossi"}  // metodo alternativo per eseguire la funzione.
+
+        // questo medoto non è utile, in quanto restituisce sempre la stessa stringa. Quindi se andassi a cambiare il valore delle proprietà, restituirebbe sempre "Mario Rossi"
+
+        //JS ci fornisce un modo per visualizzare il valore corrente delle proprietà => keyword this.
+
+        persona.nomeCognome = function(){return this.nome + " " + this.cognome;}
+
+        // così facendo, la funzione restituirà i valori correnti delle proprietà
+    </script>
+</body>
+</html>

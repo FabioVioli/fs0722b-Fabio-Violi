@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype - Ereditarietà</title>
+</head>
+<body>
+    <!-- possiamo modificare la struttura degli oggetti anche dopo la loro creazione -->
+
+    <script>
+
+        // var MarioRossi = new persona ("Mario", "Rossi");
+        // var GiuseppeVerdi = new persona("Giuseppe", "Verdi");
+        // MarioRossi.telefono = "1234567890" // posso aggiungere all'oggetto qualcosa.
+
+        // creo una nuova proprietà a Mario  Rossi, senza influenzare la struttura di Giuseppe Verdi.
+        // quando creiamo oggetti, possiamo partire da una struttura di dati comune, la quale sarà definita da un costrutture.
+        // La possiamo poi personalizzare in base alle nostre esigenze.
+
+        // ed è in questo frangente che ci viene in soccorso "prorotype"
+        // prototype => persona.prototype.telefono = "345364574". Estendo il costruttore, e aggiungo a tutti quanti una proprietà.
+
+        // tutti gli oggetti che avevamo creato in in precedenza, e che creeremo da quì in avanti, col costrutture persona, ora hanno anche la proprietà telefono.
+
+        function Student (name, age){
+            this.name = name;
+            this.age = age;
+        }
+
+        var studente1 = new Student("Luigi bianchi", 43);
+        var studente2 = new Student("Mario Rossi", 32);
+
+        console.log(studente1, studente2);
+
+        // uso quindi prorotype per aggiungere nuove proprietà al modello base
+
+        Student.prototype.skills = []; // skills è accessibile come se fosse una proprietà dell'oggetto.
+        // il prototipo ha un riferimento a un altro oggetto;
+
+        console.log(studente1, studente2);
+
+        studente1.skills = ["html", "css", "js"];
+        studente2.skills = ["surf", "dance", "play an instrument"];
+
+        console.log(studente1, studente2);
+
+        // Eredità prorotipale => prorotypal inheritance
+        // se una proprietà non si trova in un oggetto, la si cerca nel prototipo.
+        // il prototipo di un oggetto può essere a sua volta un altro prototipo ( in tal caso, si risale nella catena dei prototipi, al fine di cercare la proprietà)
+
+        Student.experience = [];
+        studente1.experience = ["2 anni manovale", "2 anni commesso"]
+        console.log(studente1,studente2);
+    </script>
+</body>
+</html>
