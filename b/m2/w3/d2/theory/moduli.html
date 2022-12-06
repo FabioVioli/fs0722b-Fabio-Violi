@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moduli</title>
+</head>
+<body>
+    
+<!-- Design pattern
+    schermi che offrono soluzioni a problemi comuni di progettazione del software
+    schemi logici ( modalità riutilizzabili e indipendenti dal linguaggio di programmazione ) di risoluzione di un problema
+
+    modelli di riferimento per realizzare componenti di software di facile manutenzione ( modelli progettuali quindi )
+
+    pattern creazionali => singleton pattern ( prevede un'unica istanza di oggetto) => una classe può essere istanziata una sola volta.
+
+    pattern creazionali => factory pattern  
+
+    pattern comportamentali => observer pattern 
+
+    pattern strutturali => module pattern
+    pattern strutturali => adapter pattern
+    pattern strutturali => facade pattern
+    pattern strutturali => MVC/MVVM pattern
+
+    module pattern ( esistono fin da ECMA script 5)
+    Si basano su meccanismi di importazione ed esportazione ( ad esempio i partials di sass)
+    Avremo quindi dei moduli che saranno contemporaneamente accessibili ed esportabili
+
+    Ci consentono quindi di avere un'architettura più facilmente decifrabile, robusta e gestibile.
+    -->
+<script>
+
+let modulo = (function(){   // IIFE immediately invoked function Expression
+                            // si esegue in automatico senza bisogno di essere lanciata
+    function metodoPrivato(){
+        //
+    }
+    return {    //restituisce un oggetto che ha un metodo pubblico 
+        medotoPubblico(){
+            metodoPrivato()
+        }
+    }
+
+});
+
+modulo.metodoPubblico();
+
+</script>
+
+</body>
+</html>

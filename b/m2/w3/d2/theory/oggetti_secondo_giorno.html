@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oggetti</title>
+</head>
+<body>
+    
+<!-- Javascript è un linguaggio di programmazione "a oggetti" basato sul concetto di prototipo 
+
+Altri linguaggi di programmazione sono invece basati sul concetto di classe
+=> un oggetto è sempre istanza di una classe
+=> un oggetto non può esistere se prima non è stata definita una classe 
+=> creare delle sottoclassi ( javascript prototipes)
+=> nei linguaggi tradizionali ( Java, C#) la classe definisce tutte le caratteristiche che può avere un oggetto.
+=> in Javscript invece, possiamo definire le caratteristiche di un oggetto, e in seguito arricchirlo ( prototype ) con nuove proprietà e metodi.
+
+Dal 2016, con ECMA script 6, Javascript introduce class con lo scopo di avvicinare a Javascript gli sviluppatori che provenivano da altri contesti
+
+Uniformando Javascript in termini di approccio alla scrittura del codice.
+-->
+
+<!-- 
+una classe è quindi un modo alternativo ( in javascript ) di definire un costruttore.
+
+ -->
+
+<script>
+
+    class Persona {    // all'interno della classe
+        constructor(nome, cognome){     
+        // definisco il costruttore tramite la key constructor
+            this.nome = nome;
+            this.cognome = cognome;
+            this.email = "";
+            this.indirizzo = "";
+        }
+        mostraNomeCompleto(){
+            return this.nome + " " + this.cognome;
+        }
+    }
+
+    // il costrutto class è solo una semplificazione sintattica 
+    // definita la classe, possiamo quindi creare un nuovo oggetto ( a partire dalla clase definita). L'operatore è sempre "new"
+
+    let marioRossi = new Persona ("Mario", "Rossi");
+    // possiamo anche ottenere valori di proprietà ( get ) oppure settare valori di proprietà ( set )
+
+    // sottoclassi ed ereditarietà
+    // possiamo creare delle sottoclassi estendendo una class
+
+    class Programmatore extends Persona {   
+        constructor(nome, cognome){
+            super(nome, cognome);
+            this.linguaggiConosciuti = [];
+        }
+    }
+
+    // extends è una keyword che consente di dichiarare che la nuova classe ( Programmatore ) deriva dalla classe persona
+    // all'interno della classe Programmatore, richiamiamo il costruttore della classe persona tramite l'invocazione di super()
+
+    //super ci permette di fare riferimento alla "super classe"
+    //dentro javascript, class è semplicemente un costruttore di oggetti ( ricordiamo ci che possiamo definire un oggetto anche senza class)
+
+    // keyword static è un metodo ( definito all'interno della classe ) e ne dipende strettamente.
+    // a differenza degli altri metodi non può essere chiamato nell'oggetto ma solo nella classe
+
+    class Animali{
+        constructor(specie){
+            this.specie = specie;
+        }
+        static mostra(){
+            return this.specie;
+        }
+    }
+
+    let gatto = new Animali("specie_di_gatto")
+    gatto.mostra(); // non lo vedo, avendo mostra() il metodo static
+    Animali.mostra; // lo vedo, essendo static mostra() all'interno dell'oggetto.
+    
+</script>
+</body>
+</html>

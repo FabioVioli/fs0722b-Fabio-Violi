@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    
+
+    <!-- JSON => JavaScript Object Notation >= formato per lo scambio dei dati
+         JSON si basa sulla notazione letterale degli oggetti ( già ben presente in JavaScript) 
+         
+         JSON è stato riscoperto/utilizzato come formato per lo scambio di dati specialmente da quando esisste ajax.
+
+         sintassi di JSON si origina dagli oggetti letterali in javascript
+        -->
+
+        <script>
+
+            let JSON = {
+                proprietà1: "valore",
+                proprietà2: "valore",
+                proprietà3: "valore"
+            
+            }
+
+            // coppie di proprietà:valore separate dalla virgola ( ad eccezione dell'ultima)
+            // l'intero oggetto viene racciuso tra parentesi graffe {}
+            // a differenza della notazione javascript, dentro JSON ci possono essere soltanto valori semplici ( no funzioni, no valori complessi )
+
+            // possiamo quindi mettere numeri, stringhe array, oggetti, true/false, null
+
+            //esempio
+
+            let prova = {
+                "home": "Epicode.it",
+                "link": "https://www.epicode.it",
+                "argomento": "Standard del web",
+                "aree": [
+                    {
+                        "area": "css",
+                        "url": "https//css.epicode.it"
+                    },
+                    {
+                        "area": "javascript",
+                        "url": "https//javascript.epicode.it"
+                    }
+                ]
+            }
+
+            // inizia con una coppia di parentesi graffe ( che racchiudono tutta la struttura)
+            // seguono le coppie proprietà:valore ( che possono contenere valori atomici o altri oggetti. ATTENZIONE ALLE QUADRE [])
+            //JSON chiede che i valori e le proprietà siano tra ""
+            // per accedere ai valori json .dot notation
+
+            oggetto.home // epicode.it
+            oggetto.link // https://www.epicode.it
+            let aree = oggetto.aree // array
+            for (let i = 0; i < aree.length; i++) {
+                
+            }
+
+            // JSON viene usato da javascript tramite ajax.
+            // faccio una richiesta  => viene restituito l'oggetto
+
+            $.ajax({
+                url: "json.html",
+                type: "get",
+                dataType: "json",
+                success // ...
+            })
+        </script>
+</body>
+</html>

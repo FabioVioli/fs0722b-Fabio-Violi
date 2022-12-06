@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2</title>
+</head>
+<body>
+    
+    <script>
+        class Persona{
+            constructor(nome, cognome, age){
+                this.nome = nome;
+                this.cognome = cognome;
+                this.age = age;
+                this._email = "";
+                this.indirizzo = "";
+            }
+            mostraNomeCompleto(){
+                return this.nome + " " + this.cognome;
+            }
+            // con get possiamo recuperare un valore
+            get email(){ return this._email;}
+            // con get possiamo settare un valore
+            set email(value){
+                let emailRegExp = /\w+@\w+\.\w{2,4}/i;
+                if(emailRegExp.test(value)){
+                    this._email = value;
+
+                }else{
+                    console.log("Email non valida")
+                }
+            }
+        }
+
+        let myPersona = new Persona ("mario", "rossi", "43");
+        console.log(myPersona.mostraNomeCompleto(),myPersona)
+    </script>
+</body>
+</html>

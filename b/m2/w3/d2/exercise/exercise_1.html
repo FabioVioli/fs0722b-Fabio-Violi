@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    
+
+    <script>
+
+        class Persona {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            diffEta(a,b){
+                if(a.age > b.age ){
+                    console.log(`${a.name} è più grande di ${b.name}`)
+                }else if (a.age == b.age){
+                    console.log(`${a.name} ha l stessa età di ${b.name}`)
+                }else{
+                    console.log(`${a.name} è più piccolo di ${b.name}`)
+                }
+            }
+        }
+
+        let p1 = new Persona ("Paolo", 25);
+        let p2 = new Persona ("Marco", 30);
+        let p3 = new Persona ("Luca", 25);
+
+        p1.diffEta(p1,p2)
+        p2.diffEta(p2,p3)
+        p3.diffEta(p3,p1)
+        
+
+
+        
+    </script>
+</body>
+</html>
