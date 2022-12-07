@@ -14,13 +14,14 @@
     <script>
 
         let x = document.getElementById("timer")
-        x.textContent
+        x.value = 0
         
         function timer(){
             setInterval(() => {
-
-                y +=1
-                sessionStorage.setItem("timer", y)
+                x.value +=1;
+                console.log(x.value)
+                document.getElementById("timer").textContent = x.value
+                sessionStorage.setItem("timer", x.value)
                 
             }, 1000);
         }
