@@ -58,29 +58,29 @@
         {id: 7, nome: 'Gianno', cognome: 'Bianchi', classe: 'A'},
         {id: 8, nome: 'Davide', cognome: 'Neri', classe: 'A'},
     ]
-        document.querySelector('tbody').innerHTML = `<tr><td>${array[0].id}</td><td>${array[0].nome}</td><td>${array[0].cognome}</td><td>${array[0].cognome}</td></tr>
-        <tr><td>${array[1].id}</td><td>${array[1].nome}</td><td>${array[1].cognome}</td><td>${array[1].cognome}</td></tr>`
+        document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[0].id}</td><td>${array[0].nome}</td><td>${array[0].cognome}</td><td>${array[0].classe}</td></tr>
+        <tr><td>${array[1].id}</td><td>${array[1].nome}</td><td>${array[1].cognome}</td><td>${array[1].classe}</td></tr>`
 
         first.addEventListener("click", () =>{
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[0].id}</td><td>${array[0].nome}</td><td>${array[0].cognome}</td><td>${array[0].cognome}</td></tr>
-        <tr><td>${array[1].id}</td><td>${array[1].nome}</td><td>${array[1].cognome}</td><td>${array[1].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[0].id}</td><td>${array[0].nome}</td><td>${array[0].cognome}</td><td>${array[0].classe}</td></tr>
+        <tr><td>${array[1].id}</td><td>${array[1].nome}</td><td>${array[1].cognome}</td><td>${array[1].classe}</td></tr>`
         })
 
         previous.addEventListener("click", () =>{
             let x = document.querySelector(".prova").textContent;
            if(x == 7){
             
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[4].id}</td><td>${array[4].nome}</td><td>${array[4].cognome}</td><td>${array[4].cognome}</td></tr>
-        <tr><td>${array[5].id}</td><td>${array[5].nome}</td><td>${array[5].cognome}</td><td>${array[5].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[4].id}</td><td>${array[4].nome}</td><td>${array[4].cognome}</td><td>${array[4].classe}</td></tr>
+        <tr><td>${array[5].id}</td><td>${array[5].nome}</td><td>${array[5].cognome}</td><td>${array[5].classe}</td></tr>`
         
            }else if( x == 5){
 
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[2].id}</td><td>${array[2].nome}</td><td>${array[2].cognome}</td><td>${array[2].cognome}</td></tr>
-        <tr><td>${array[3].id}</td><td>${array[3].nome}</td><td>${array[3].cognome}</td><td>${array[3].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[2].id}</td><td>${array[2].nome}</td><td>${array[2].cognome}</td><td>${array[2].classe}</td></tr>
+        <tr><td>${array[3].id}</td><td>${array[3].nome}</td><td>${array[3].cognome}</td><td>${array[3].classe}</td></tr>`
 
            }else if(x == 3){
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[0].id}</td><td>${array[0].nome}</td><td>${array[0].cognome}</td><td>${array[0].cognome}</td></tr>
-        <tr><td>${array[1].id}</td><td>${array[1].nome}</td><td>${array[1].cognome}</td><td>${array[1].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[0].id}</td><td>${array[0].nome}</td><td>${array[0].cognome}</td><td>${array[0].classe}</td></tr>
+        <tr><td>${array[1].id}</td><td>${array[1].nome}</td><td>${array[1].cognome}</td><td>${array[1].classe}</td></tr>`
            }
             
         })
@@ -89,23 +89,23 @@
             let x = document.querySelector(".prova").textContent;
            if(x == 1){
             
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[2].id}</td><td>${array[2].nome}</td><td>${array[2].cognome}</td><td>${array[2].cognome}</td></tr>
-        <tr><td>${array[3].id}</td><td>${array[3].nome}</td><td>${array[3].cognome}</td><td>${array[3].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[2].id}</td><td>${array[2].nome}</td><td>${array[2].cognome}</td><td>${array[2].classe}</td></tr>
+        <tr><td>${array[3].id}</td><td>${array[3].nome}</td><td>${array[3].cognome}</td><td>${array[3].classe}</td></tr>`
         
            }else if( x == 3){
 
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[4].id}</td><td>${array[4].nome}</td><td>${array[4].cognome}</td><td>${array[4].cognome}</td></tr>
-        <tr><td>${array[5].id}</td><td>${array[5].nome}</td><td>${array[5].cognome}</td><td>${array[5].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[4].id}</td><td>${array[4].nome}</td><td>${array[4].cognome}</td><td>${array[4].classe}</td></tr>
+        <tr><td>${array[5].id}</td><td>${array[5].nome}</td><td>${array[5].cognome}</td><td>${array[5].classe}</td></tr>`
 
            }else if(x == 5){
-            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[6].id}</td><td>${array[6].nome}</td><td>${array[6].cognome}</td><td>${array[6].cognome}</td></tr>
-        <tr><td>${array[7].id}</td><td>${array[7].nome}</td><td>${array[7].cognome}</td><td>${array[7].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[6].id}</td><td>${array[6].nome}</td><td>${array[6].cognome}</td><td>${array[6].classe}</td></tr>
+        <tr><td>${array[7].id}</td><td>${array[7].nome}</td><td>${array[7].cognome}</td><td>${array[7].classe}</td></tr>`
            }
         })
 
         last.addEventListener("click", () =>{
-            document.querySelector('tbody').innerHTML = `<tr><td>${array[6].id}</td><td>${array[6].nome}</td><td>${array[6].cognome}</td><td>${array[6].cognome}</td></tr>
-        <tr><td>${array[7].id}</td><td>${array[7].nome}</td><td>${array[7].cognome}</td><td>${array[7].cognome}</td></tr>`
+            document.querySelector('tbody').innerHTML = `<tr><td class="prova">${array[6].id}</td><td>${array[6].nome}</td><td>${array[6].cognome}</td><td>${array[6].classe}</td></tr>
+        <tr><td>${array[7].id}</td><td>${array[7].nome}</td><td>${array[7].cognome}</td><td>${array[7].classe}</td></tr>`
         })
 
 

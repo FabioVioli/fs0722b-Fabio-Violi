@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web storage</title>
+</head>
+<body>
+    <!-- Novità HTML
+        => nuovi tag audio, video, svg
+        => nuove API geolocation, web workers, canvas
+
+        => noi ci occuperemo di un'unica API, che si occupa di WEB STORAGE dei dadi.
+        
+        Nasce per risolvere un paio di problemi:
+            1) Problema dei cookies (4k).
+            2) Impossibilità di "storare" cookies differenziati tra due diverse sessioni di navigazione.
+
+            per risolvere questi problemi, vengono in aiuto 2 nuovi oggetti ( parte della famiglia web storage):
+            1) Session Storage => Persistenza di dati finché c'è una finestra di navigazione aperta ( chiusa la finestra, si resettano )
+            2) Local Storage => La persistenza dei dati rimane fino a che non vengono cancellati ( i dati sono in comune a tutte le tab aperte)
+               Possono ospitare molti più dati dei cookies ( 5mb )
+
+               // Specifiche
+
+               Abbiamo una singola interfaccia Storage ( quindi sia session che local storage implementano gli stessi metodi )
+
+-->
+
+
+    <script>
+            // Inserimento "stringhe" come oggetti.
+
+        localStorage.nome = "Federico"; // possiamo salvare i dati come in un normale array associativo
+        localStorage.cognome = "De Ambrosis";
+
+        localStorage.setItem("nome", "Federico"); // oppure tramite l'ausilio dei metodi dedicati ( coppia valore ) - Set Item
+        localStorage.getItem("nome");               // con "getItem" invece, ci restituisce "Federico"
+        localStorage.removeItem('key')       // rimuove una key dallo storage
+        localStorage.clear()                // elimina tutte le chiavi
+
+        // Inserimento oggetti diversi da stringhe
+
+        localStorage.ordini = Array("1","2","3");
+        localStorage.ordini; // ritorna 1,2,3
+
+        // se ho dati diversi da stringhe, devo ricorrere alla serializzazione su Json.
+
+        localStorage.ordini = JSON.stringify(Array(1,2,3));  // serializzazione tramite stringify
+
+        JSON.parse(localStorage.ordini);  // ritorna un array di 3 elementi [1,2,3]
+
+        
+    </script>
+</body>
+</html>

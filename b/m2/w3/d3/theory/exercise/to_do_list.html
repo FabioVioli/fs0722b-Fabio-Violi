@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+        li{
+            width: 180px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px black solid;
+            list-style: none;
+            
+        }
+    </style>
+</head>
+<body>
+<h1>To Do List</h1>
+<input type="text" placeholder="write here" id="input">
+<br>
+<button id="add">Add</button>
+<br>
+<ul id="list"></ul>
+<button class="del" style="display: none;"></button>
+
+
+<script>
+    let input = document.getElementById("input");
+    let add = document.getElementById("add");
+    let list = document.getElementById("list");
+    let array = []
+    let del = document.querySelector('.del')
+
+    add.addEventListener("click", ()=>{
+        if(input.value != ""){
+        text = input.value;
+        let oggetto = array.length;    
+        localStorage.setItem(`oggetto lista ${oggetto}`, text)
+
+        array.push(text)
+        document.getElementById("list").innerHTML += `<li id="l-${oggetto}">${text} <button class="del">X</button></li>`
+
+        }else{
+            alert("scrivi qualcosa!")
+        }   
+    })
+
+    
+    
+
+        
+</script>
+</body>
+</html>
