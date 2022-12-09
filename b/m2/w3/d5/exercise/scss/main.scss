@@ -1,0 +1,28 @@
+#container{
+    div{
+        width: 280px;
+        height: 280px;
+        border: 2px solid rgba(228, 226, 226, 0.911);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5%;
+        
+        img{
+            background-color: rgba(243, 243, 243, 0.959);
+            
+            padding: 25px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(250, 199, 70);
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+    }
+}
