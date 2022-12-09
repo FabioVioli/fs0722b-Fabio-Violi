@@ -19,10 +19,9 @@
         function timer(){
             setInterval(() => {
                 x.value +=1;
+
                 console.log(x.value)
                 document.getElementById("timer").textContent = x.value
-                sessionStorage.setItem("timer", x.value)
-                
             }, 1000);
         }
 

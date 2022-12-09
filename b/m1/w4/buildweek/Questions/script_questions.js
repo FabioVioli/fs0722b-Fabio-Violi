@@ -17,9 +17,9 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
     inputText.type = 'text';
     inputText.placeholder = 'Enter the number of questions(default = 10)'
     inputText.classList.add('input-numeri')
-//Evento per leggere singoli caratteri inseriti dall'utente nel input test
+    //Evento per leggere singoli caratteri inseriti dall'utente nel input test
     inputText.addEventListener('keyup', function () {
-//Serve per controllare se l'ultimo carattere inserito è un numero o una lettera, se è una lettera la rimuove        
+    //Serve per controllare se l'ultimo carattere inserito è un numero o una lettera, se è una lettera la rimuove        
         if (isNaN(this.value)) {
             this.value = this.value.substring(0, this.value.length - 1)
         }       

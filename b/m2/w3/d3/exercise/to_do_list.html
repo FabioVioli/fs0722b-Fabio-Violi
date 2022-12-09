@@ -49,10 +49,10 @@
         text = input.value;
         let oggetto = array.length;    
         localStorage.setItem(`oggetto lista ${oggetto}`, text)
-
+        
         array.push(text)
         document.getElementById("list").innerHTML += `<li id="l-${oggetto}">${text} <button class="del">X</button></li>`
-
+        
         }else{
             alert("scrivi qualcosa!")
         }   
