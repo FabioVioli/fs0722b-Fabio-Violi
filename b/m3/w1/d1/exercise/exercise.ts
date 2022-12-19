@@ -1,6 +1,6 @@
 function Numbers(numA:number, numB:number) {
 
-    let randomNumber: number = Math.floor(Math.random() * (100) + 1)
+    let randomNumber: number = Math.floor(Math.random() * (100-1) + 1)
     console.log("Il numero generato randomicamente è " + randomNumber)
     console.log("Il numero A è " + numA)
     console.log("Il numero B è " + numB)
