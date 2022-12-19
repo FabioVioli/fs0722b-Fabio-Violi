@@ -57,5 +57,87 @@
         qualsiasi script Javascript è anche codice TypeScript valido ( quindi posso fare il passaggio gradualmente )
     -->
 
+
+    <!-- 
+        passaggi
+        1. Salvo il file in formato .ts
+        2. apro il terminale
+        3. tsc + nome del file.ts ( controllo di essere nella cartella del file)
+        4. node + nome del file .js ( eseguo nel terminale il console.log)
+
+        flag del compilatore
+        --help ( stampa la guida )
+        --watch ( controlla le modifiche ai file e li ricompila )
+        --module ( carica moduli esterni)
+        --target ( imposta la versione ECMA di destinazione )
+
+        lista completa => https://www.typescriptlang.org/docs/handbook/compiler-options.html
+        https://www.typescriptlang.org/tsconfig 
+
+        https://www.typescriptlang.org/docs/handbook/configuring-watch.html
+        <<<<<<<<( configurazione watch )>>>>>>>
+
+        in alternativa, possiamo usare tsc + nome del file
+        posso compilare più files tsc file1.ts, file2.ts, file3.ts
+    -->
+
+    <!-- 
+        Regole di sintassi basilari > nomenclatura degli identificatori ( regole molto simili a js )
+
+        --possono includere caratteri e cifre, ma non possono iniziare con una cifra 
+        --non possono usare caratteri speciali, ad eccezione di _ e $
+        --non possono essere keywords (switch, for, while, this, static, etc...)
+        --devono essere unici
+        --case sensitive ( ts fa distinzione tra maiuscole e minuscole)
+        --non possono contenere spazi
+
+        ok => firstName, first_name, 1number
+        ko => Var, first name, first-name, 1number
+
+        -- Typescript ignora gli spazi ( uso spazi e tab per tenere il codice più ordinato )
+        -- i punti e virgola sono facoltativi ( se metto più istruzioni sulla stessa riga, devo comunque separarli con il ; )
+        -- I commenti possono esere single line // o multi line /* */
+     -->
+
+     <!-- 
+        TypseScript è Javascript orientato agli oggetti => consideriamo un programma come una raccolta di oggetti che comincano tra loro tramite metodi
+
+        Gli oggetti rappresentano un'entità con 3 caratteristiche:
+        1) stato
+        2) comportamento
+        3) identità
+
+        Gli oggetti hanno delle classi, ovvero dei modelli su cui vengono creati
+        Hanno inoltre dei metodi per omunicare tra di loro ( funzioni )
+      -->
+
+      <!-- 
+        Tipi di dati in TypeScript
+        Number, String, Boolean, 
+        Null => La variabile è impostata su un valore non definito
+        Undefined => La variabile non ha alcun valore
+
+        - void => assenza di valore => lo uso quando una funzione non restituisce alcun valore
+
+        ex: function myFunc():void {
+            console.log/("messaggio");
+        }
+
+        - any => consente alla variabile di contenere qualsiasi tipo di dato ( come in js )
+
+        var myVar:any = 123;
+        myVar = "Una stringa";
+        myVar = true;
+
+        assume quindi dinamicamente qualsiasi valore come in JavaScript
+
+        Esistono infine dati definiti dall'utente:
+
+        - enum
+        - classi
+        - interfacce
+        - array
+        - tuple
+       -->
 </body>
 </html>
