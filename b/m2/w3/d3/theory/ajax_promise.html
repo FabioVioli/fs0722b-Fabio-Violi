@@ -17,11 +17,11 @@
         asyncCalls.ajaxCall('https://jsonplaceholder.typicode.com/todos/', 'get')
             .then((response)=>{
                 let res = JSON.parse(response);
-                let LI = "";
+                let LI = document.querySelector("#lista");
                 res.forEach(element => {
-                    LI += `<li><b>${element.title}</b><b>${element.completed}</b></li>`
+                    LI.innerHTML += `<li><b>${element.title}</b><b>${element.completed}</b></li>`
                 });
-                document.querySelector('#lista').innerHTML = LI
+               
             });
     </script>
 </body>
