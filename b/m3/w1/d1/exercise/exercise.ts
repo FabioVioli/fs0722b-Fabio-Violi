@@ -1,15 +1,12 @@
 function Numbers(numA:number, numB:number) {
-
     let randomNumber: number = Math.floor(Math.random() * (100-1) + 1)
     console.log("Il numero generato randomicamente è " + randomNumber)
     console.log("Il numero A è " + numA)
     console.log("Il numero B è " + numB)
-
     let diffA: number = Math.abs(numA - randomNumber)
     console.log("La differenza tra il numero A ed il numero generato randomicamente è di " + diffA)
     let diffB: number = Math.abs(numB - randomNumber)
     console.log("La differenza tra il numero B ed il numero generato randomicamente è di " + diffB)
-    
     if (randomNumber == numA) {
         console.log("Numbero A è uguale al numero Random")
     } else if (randomNumber == numB) {
