@@ -1,18 +1,20 @@
 class user {
     name:string;                                                    
-    account;                                                     
+    account:number;                                                     
     constructor(name:string, account:number){                       
         this.name = name;
         this.account = account;   
     }
-    deposit(amount:number){
-        amount = (<HTMLInputElement>document.getElementById("money")).value
-        this.account = this.account + money
+
+
+    deposit(){
+        let amount = (<HTMLInputElement>document.getElementById("money")).value
+        this.account = this.account + amount
     }
 
     withdraw(){
-        let money = (<HTMLInputElement>document.getElementById("money")).value
-        this.account = this.account - money
+        let amount = (<HTMLInputElement>document.getElementById("money")).value
+        this.account = this.account - amount
     }
 }
 
@@ -34,7 +36,7 @@ class Adult extends user {
 let Mother = new Adult ("Mother", 100000, 1.1)
 let Son = new user ("Son", 1000)
 
-document.getElementById("deposit")?.addEventListener("click", ()=>{
+(<HTMLInputElement>document.getElementById("deposit")).addEventListener("click", ()=>{
     let x = (<HTMLInputElement>document.getElementById("user")).value
     let y = (<HTMLInputElement>document.getElementById("money")).value
     if(x == "Mother"){
@@ -49,7 +51,7 @@ document.getElementById("deposit")?.addEventListener("click", ()=>{
     }
 })
 
-document.getElementById("withdraw")?.addEventListener("click", ()=>{
+(<HTMLInputElement>document.getElementById("withdraw")).addEventListener("click", ()=>{
     let x = (<HTMLInputElement>document.getElementById("user")).value
     let y = (<HTMLInputElement>document.getElementById("money")).value
     if(x == "Mother" && this.account >= x){

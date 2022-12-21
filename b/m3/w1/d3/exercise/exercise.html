@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <input type="text" id="nome" placeholder="Inserisci il tuo Nome">
+    <input type="number" id="cod" placeholder="Inserisci il tuo Cod ( 1-3 )">
+    <input type="number" id="reddito" placeholder="Inserisci il tuo reddito">
+    <button id="button">Calcola il tuo reddito annuo</button>
+    </div>
+    <div id="outcome">
+    <h3></h3>
+    </div>
+
+    <script src="./exercise.js"></script>
+</body>
+</html>
