@@ -96,7 +96,7 @@ var Giorgia = new Attrice(3, 100000, "Giorgia");
 // console.log(`Le tasse Inps di ${Giorgia.nome} sono di ` + Giorgia.getTasseInps())
 // console.log(`Le tasse Irpef di ${Giorgia.nome} sono di ` + Giorgia.getTasseIrpef())
 // console.log(`Il reddito annuale netto di ${Giorgia.nome} è di ` + Giorgia.getRedditoAnnualeNetto())
-var button = document.getElementById("#button");
+var button = document.getElementById("button");
 button === null || button === void 0 ? void 0 : button.addEventListener("click", function () {
     var nome = document.getElementById("nome").value;
     var cod = document.getElementById("cod").value;
@@ -104,6 +104,7 @@ button === null || button === void 0 ? void 0 : button.addEventListener("click",
     console.log(nome);
     console.log(cod);
     console.log(reddito);
-    var User = new Magazziniere(Number(cod), Number(reddito), nome);
-    document.getElementById("outcome").innerHTML = "<h3>Ciao ".concat(User.nome, ", il tuo reddito annuale esentasse \u00E8 di ").concat(User.getRedditoAnnualeNetto(), "</h3>");
+    var User = new Magazziniere(Number(cod), Number(reddito), String(nome));
+    document.getElementById("outcome").innerHTML = "<h3>Ciao ".concat(User.nome, ", il tuo reddito annuale esentasse \u00E8 di ").concat(User.getRedditoAnnualeNetto(), ".<div></h3> <hr> <h3>Utile Tasse = ").concat(User.getUtileTasse(), "</h3> <hr> <h3>UTasse INPS = ").concat(User.getTasseInps(), "</h3><hr><h3>Tasse IRPEF = ").concat(User.getUtileTasse(), "</h3></div>");
+    console.log(User.getRedditoAnnualeNetto());
 });

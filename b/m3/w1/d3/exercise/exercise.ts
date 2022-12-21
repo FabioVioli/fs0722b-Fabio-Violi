@@ -90,7 +90,7 @@ let Giorgia = new Attrice(3, 100000, "Giorgia")
 // console.log(`Le tasse Irpef di ${Giorgia.nome} sono di ` + Giorgia.getTasseIrpef())
 // console.log(`Il reddito annuale netto di ${Giorgia.nome} è di ` + Giorgia.getRedditoAnnualeNetto())
 
-let button = <HTMLButtonElement>document.getElementById("#button")
+let button = <HTMLButtonElement>document.getElementById("button")
 button?.addEventListener("click", ()=>{
     let nome = (<HTMLInputElement>document.getElementById("nome")).value
     let cod = (<HTMLInputElement>document.getElementById("cod")).value
@@ -100,7 +100,9 @@ button?.addEventListener("click", ()=>{
     console.log(cod)
     console.log(reddito)
     
-    let User = new Magazziniere (Number(cod), Number(reddito), nome);
-    (<HTMLDivElement>document.getElementById("outcome")).innerHTML = `<h3>Ciao ${User.nome}, il tuo reddito annuale esentasse è di ${User.getRedditoAnnualeNetto()}</h3>`
+    let User= new Magazziniere (Number(cod), Number(reddito), String(nome));
     
+
+    (<HTMLDivElement>document.getElementById("outcome")).innerHTML = `<h3>Ciao ${User.nome}, il tuo reddito annuale esentasse è di ${User.getRedditoAnnualeNetto()}.<div></h3> <hr> <h3>Utile Tasse = ${User.getUtileTasse()}</h3> <hr> <h3>UTasse INPS = ${User.getTasseInps()}</h3><hr><h3>Tasse IRPEF = ${User.getUtileTasse()}</h3></div>`
+    console.log(User.getRedditoAnnualeNetto())
 })
