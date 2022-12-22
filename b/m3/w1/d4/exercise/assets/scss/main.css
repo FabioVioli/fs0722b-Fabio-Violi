@@ -1,0 +1,38 @@
+#fluid {
+  background-color: pink;
+}
+
+#parent {
+  background-image: url("../img/bgimg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  height: 100vh;
+}
+
+.card {
+  height: 45%;
+  background: rgba(0, 0, 0, 0.1);
+}
+.card div {
+  text-align: center;
+}
+.card div img {
+  width: 150px;
+  border-radius: 25px;
+  border: 2px rgb(199, 117, 117) solid;
+}
+.card div h5 {
+  font-size: 2em;
+}
+.card div p {
+  margin: 0;
+  font-weight: 700;
+}
+.card div button {
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(226, 70, 31, 0.507);
+  font-weight: 500;
+}/*# sourceMappingURL=main.css.map */

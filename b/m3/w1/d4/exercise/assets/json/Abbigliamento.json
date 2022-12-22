@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "codprod":2121,
+      "collezione":"primavera",
+      "capo":"Cardigan",
+      "modello":1231,
+      "quantita":5,
+      "colore":"nero",
+      "prezzoivaesclusa":18.50,
+      "prezzoivainclusa":22.57,
+      "disponibile":"negozio",
+      "saldo":45,
+      "immagine": "https://cdn.shopify.com/s/files/1/0033/7854/4729/products/cardiganno7.1_979bae3a-2c74-411a-8cce-965d64ca5efb_1024x1024@2x.jpg?v=1596015533"
+     
+    },
+
+    {
+        "id": 2,
+        "codprod":4111,
+        "collezione":"estate",
+        "capo":"T-Shirt",
+        "modello":1251,
+        "quantita":6,
+        "colore":"rosso",
+        "prezzoivaesclusa":5.50,
+        "prezzoivainclusa":6.71,
+        "disponibile":"magazzino",
+        "saldo":30,
+        "immagine": "https://s3-eu-west-1.amazonaws.com/images.linnlive.com/d4cf250f63918acf8e5d11b6bfddb6ba/d4806d8a-42ae-4e44-a5cb-38731a58f2c3.jpg"
+      },
+
+      {
+        "id": 3,
+        "codprod":1181,
+        "collezione":"inverno",
+        "capo":"Felpa",
+        "modello":1229,
+        "quantita":8,
+        "colore":"beige",
+        "prezzoivaesclusa":17.50,
+        "prezzoivainclusa":21.35,
+        "disponibile":"negozio",
+        "saldo":50,
+        "immagine": "https://egress.storeden.net/jpg/618d4ba65fb8e061488b4819"
+      },
+
+      {
+        "id": 4,
+        "codprod":1111,
+        "collezione":"estate",
+        "capo":"Maglione",
+        "modello":1221,
+        "quantita":4,
+        "colore":"verde",
+        "prezzoivaesclusa":20,
+        "prezzoivainclusa":24.40,
+        "disponibile":"negozio",
+        "saldo":50,
+        "immagine": "https://product-assets.rinascente.it/36/15739/3615739528007_04__66JHoJ.jpg?impolicy=resize&imwidth=556"
+      },
+
+      {
+        "id": 5,
+        "codprod":6111,
+        "collezione":"primavera",
+        "capo":"Maglia",
+        "modello":1021,
+        "quantita":5,
+        "colore":"blu",
+        "prezzoivaesclusa":11,
+        "prezzoivainclusa":13.42,
+        "disponibile":"magazzino",
+        "saldo":60,
+        "immagine": "https://img.ltwebstatic.com/images3_pi/2022/06/13/1655118714b519266960c4a3101f55b57baef11361_thumbnail_600x.webp"
+      },
+
+      {
+        "id": 6,
+        "codprod":4531,
+        "collezione":"Estate",
+        "capo":"Camicia",
+        "modello":1021,
+        "quantita":2,
+        "colore":"bianca",
+        "prezzoivaesclusa":18,
+        "prezzoivainclusa":20,
+        "disponibile":"negozio",
+        "saldo":25,
+        "immagine": "https://m.media-amazon.com/images/I/71WbonOhZ5L._AC_UX679_.jpg"
+      }
+    
+  ]

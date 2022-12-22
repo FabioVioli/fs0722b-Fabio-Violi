@@ -84,18 +84,18 @@ var Attrice = /** @class */ (function (_super) {
 var Roberto = new Magazziniere(1, 25000, "Roberto");
 var Pino = new Panettiere(2, 30000, "Peter");
 var Giorgia = new Attrice(3, 100000, "Giorgia");
-// console.log(`Le tasse sull'utile di ${Roberto.nome} sono di `+ Roberto.getUtileTasse())
-// console.log(`Le tasse Inps di ${Roberto.nome} sono di ` + Roberto.getTasseInps())
-// console.log(`Le tasse Irpef di ${Roberto.nome} sono di ` + Roberto.getTasseIrpef())
-// console.log(`Il reddito annuale netto di ${Roberto.nome} è di ` + Roberto.getRedditoAnnualeNetto())
-// console.log(`Le tasse sull'utile di ${Pino.nome} sono di `+ Pino.getUtileTasse())
-// console.log(`Le tasse Inps di ${Pino.nome} sono di ` + Pino.getTasseInps())
-// console.log(`Le tasse Irpef di ${Pino.nome} sono di ` + Pino.getTasseIrpef())
-// console.log(`Il reddito annuale netto di ${Pino.nome} è di ` + Pino.getRedditoAnnualeNetto())
-// console.log(`Le tasse sull'utile di ${Giorgia.nome} sono di `+ Giorgia.getUtileTasse())
-// console.log(`Le tasse Inps di ${Giorgia.nome} sono di ` + Giorgia.getTasseInps())
-// console.log(`Le tasse Irpef di ${Giorgia.nome} sono di ` + Giorgia.getTasseIrpef())
-// console.log(`Il reddito annuale netto di ${Giorgia.nome} è di ` + Giorgia.getRedditoAnnualeNetto())
+console.log("Le tasse sull'utile di ".concat(Roberto.nome, " sono di ") + Roberto.getUtileTasse());
+console.log("Le tasse Inps di ".concat(Roberto.nome, " sono di ") + Roberto.getTasseInps());
+console.log("Le tasse Irpef di ".concat(Roberto.nome, " sono di ") + Roberto.getTasseIrpef());
+console.log("Il reddito annuale netto di ".concat(Roberto.nome, " \u00E8 di ") + Roberto.getRedditoAnnualeNetto());
+console.log("Le tasse sull'utile di ".concat(Pino.nome, " sono di ") + Pino.getUtileTasse());
+console.log("Le tasse Inps di ".concat(Pino.nome, " sono di ") + Pino.getTasseInps());
+console.log("Le tasse Irpef di ".concat(Pino.nome, " sono di ") + Pino.getTasseIrpef());
+console.log("Il reddito annuale netto di ".concat(Pino.nome, " \u00E8 di ") + Pino.getRedditoAnnualeNetto());
+console.log("Le tasse sull'utile di ".concat(Giorgia.nome, " sono di ") + Giorgia.getUtileTasse());
+console.log("Le tasse Inps di ".concat(Giorgia.nome, " sono di ") + Giorgia.getTasseInps());
+console.log("Le tasse Irpef di ".concat(Giorgia.nome, " sono di ") + Giorgia.getTasseIrpef());
+console.log("Il reddito annuale netto di ".concat(Giorgia.nome, " \u00E8 di ") + Giorgia.getRedditoAnnualeNetto());
 var button = document.getElementById("button");
 button === null || button === void 0 ? void 0 : button.addEventListener("click", function () {
     var nome = document.getElementById("nome").value;
