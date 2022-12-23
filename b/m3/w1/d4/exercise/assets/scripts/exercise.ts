@@ -65,6 +65,7 @@ fetch('../exercise/assets/json/Abbigliamento.json')
 
 
             let parent = (<HTMLDivElement>document.getElementById("parent"))
+
             parent.innerHTML += `<div class="card col-3 g-2 mx-5">
             <div class="card-body d-flex flex-column justify-content-evenly align-items-center" id="btn-append">
               <img src="${element.immagine}" alt="">
@@ -76,8 +77,8 @@ fetch('../exercise/assets/json/Abbigliamento.json')
               <button>Aggiungi al carrello</button>
             </div>
           </div>`
-
-
+        
+            
         });
 
     });
