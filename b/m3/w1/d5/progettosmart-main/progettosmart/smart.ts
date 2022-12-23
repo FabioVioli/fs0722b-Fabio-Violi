@@ -71,8 +71,14 @@ class User implements ISmartphone {
         this.carica += unaRicarica
     }
     chiamata(minutiDurata: number): void {
-        this.numeroChiamate += 1
-        this.carica -= Math.ceil(minutiDurata) * 0.20
+        
+        if(Math.ceil(minutiDurata) * 0.20 > this.carica){
+            alert("credito insufficiente")
+        }else{
+            this.carica += Math.ceil(minutiDurata)*0.20
+            this.numeroChiamate += 1
+        }
+        
     };
     numero404(): number {
         return this.carica

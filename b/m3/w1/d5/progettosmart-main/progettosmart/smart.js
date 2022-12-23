@@ -60,8 +60,13 @@ var User = /** @class */ (function () {
         this.carica += unaRicarica;
     };
     User.prototype.chiamata = function (minutiDurata) {
-        this.numeroChiamate += 1;
-        this.carica -= Math.ceil(minutiDurata) * 0.20;
+        if (Math.ceil(minutiDurata) * 0.20 > this.carica) {
+            alert("credito insufficiente");
+        }
+        else {
+            this.carica += Math.ceil(minutiDurata) * 0.20;
+            this.numeroChiamate += 1;
+        }
     };
     ;
     User.prototype.numero404 = function () {
