@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+        npn i -g @angular/cli@14.2.10
+
+        da cmd ( admin ) installa angular a versione 14.2.10
+     -->
+
+    <!-- 
+        Progressive web apps: applicazioni i cui componenti si attivano solo quando chiamati in causa ( ad esempio, google documents. È un'applicazione "web" che si attiva solo a richiesta. Ad esempio, attivare bold è una scelta, così come attivare corsivo, evidenzia, etc...) 
+    
+        Applicazioni Native: Applicazioni destinate ad uno sviluppo preciso ( ad esempio, un gestionale è un'applicazione nativa. Destinata ad uno scopo preciso)
+
+        Applicazioni desktop: sono i classici programmi che installi sul computer.
+    -->
+
+    <!-- 
+        Angular genera molto codice di suo
+        
+        Utilizza universal: Creato da google
+
+        Fa utilizzo massiccio del Code Splitting: È raro trovare in angular dei file da 100/150 righe di codice. In angular, ogni elemento si porta dietro il suo pezzetto di codice, e ogni elemento ha un suo scopo preciso. Angular lavora quindi per componenti ( ogni elemento in angular fa una cosa. In seguito ci sarà un gruppo di files che metterà insieme il tutto decidendo chi fa cosa e quando)
+    -->
+
+    <!-- NB: con angular, ogni cosa che si crea è un'applicazione ( non è possibile fare cose "piccole") -->
+
+    <!-- 
+        Angular nasce per creare SPA ( SINGLE PAGE APPLICATION ): È un'applicazione basata su di un'unica pagina HTML ( su un unica pagina web ), il cui contenuto e funzionalità vengono caricate "dinamicamente" in base agli imput dell'utente. Le SPA sono al momento il sistema principale per la creazione di di APP complesse ( per capirci, amazon è una SPA ).
+        In una SPA ci sono elementi fissi, che non cambiano mai, e degli elementi dinamici ( guarda console amazon provando a cambiare pagina )
+
+        Verranno quindi scritti, ad esempio, diversi pezzi di HTML che saranno chiamati dall'utente ( parlando di amazon: cambio pagina, selezione categoria, etc... )
+
+        I vari componenti che determinano il caricamento automatico del contenuto, vengono compilati solo se vengono chiamati. Di conseguenza, il caricamento dell'applicazione è molto rapido e non sfrutta IMMEDIATAMENTE tutte le risorse del browser.
+
+        Questo non vale solo per TYPESCRIPT, ma anche per HTML e CSS ( chiamo quel componente? Carica. Non chiamo quel componente? Non carica )
+     -->
+
+     <!-- 
+        Angular è interamente basato su tTpescript, in quanto ha bisogno della tipizzazione forte ( che è una peculiarità di Typescript ) e dei meccanismi asincroni ( difficile in javascript, ma molto più semplice in typescript )
+
+        Il browser riceve quindi un file HTML, un file CSS e un BUNDLE di file JS con il quale monta il file dell'applicazione.
+        Legge l'applicazione, sintetizza l'HTML in un unico HTML, sintetizza il CSS in un unico CSS, quindi prende tutto il TS che abbiamo scritto in un unico bundle, che eseguirà quindi l'applicazione lato browser.
+      -->
+
+      <!-- 
+
+        ANGULAR.IO  >>> LA BIBBIA
+        il tutorial TOUR OF HEROES presente su ANGULAR.IO è utilissimo. Fallo.
+       -->
+
+       <!-- 
+
+        Angular JS usava il pattern Model-View-Controller
+        Angular usa components ( quello che si vede ) e direttive ( tutto quello che lavora dietro le quinte, e che pilotano le funzionalità del componente )
+        Utilizza () e [] per il two way binding, tra la parte funzionale del component e la parte front ( HTML )
+
+        Dependency Injection: Possibilità di utilizzare un determinato elemento su più componenti ( X componenti diversi "dipendono" dallo stesso elemento ).
+                              
+        Con angular si enfatizza il "pensare al progetto prima del codice".
+        Se non progetto l'applicazione prima ( carta e penna, word, o quel che si vuole), con angular mi sparo. 
+        Il sistema non è "difficile", ma è "complesso". Non è difficile "scrivere" Angular, ma "pensare" Angular.
+
+        Bisogna quindi entrare nella logica di Angular ( pensare a modo suo )
+        -->
+
+        <!-- 
+                                                                DIFFERENZA LIBRERIE E FRAMEWORKS
+
+            Libreria: Insieme di funzionalità "precotte" che mi viene messa a disposizione. Le posso usare tutte o anche solo qualcuna ( come bootstrap, anche se quest'ultimo viene considerato un framework ).
+            Framework: "Quadro di lavoro/ Ambiente di lavoro/ Cornice". È un ambiente che mi consente di agire con una certa libertà ma "all'interno della cornice ( motivo per cui bootstrap è considerato tale, vedi le 12 colonne )". Mi fornisce dunque una mole di possibilità che rarissimamente mi troverò a dire "vorrei fare X, ma il framework non me lo fa fare"
+
+            Devo sapere dunque quelli che sono i limiti di ognuno prima di scegliere.
+            Gli elementi fondamentali sono HTML, CSS e JavaCcript ( da tenere sempre in allenamento ). 
+            Il resto è situazionale ( serve Angular? uso angular. Serve Bootstrap? uso Bootstrap. Uso angular e ho problemi perché non so JS? Piango )
+
+            Altre librerie sono Vue ( libreria ), Ionic e React native ( è una libreria. Assomiglia a un Framework ma non è tale )
+         -->
+
+         <!-- 
+
+            Non usiamo unicamente JS poiché le esigenze sono diventate "complesse".
+            Il lavoro è sempre fattibile in JS, ma i tempi si allungano in maniera infinita. Motivo per cui si usano i frameworks ( o le librerie )
+
+            Quando mettiamo in piedi un'applicazione non dobbiamo pensare a cosa ci viene richiesto, ma cosa potrà esserci richiesto in futuro.
+            Quindi una situazione che ci permetta di modificare a necessità senza smontare tutto ( ed ecco la praticità di TypeScript e la programmazione a oggetti, così come di Angular )
+
+            Abbiamo bisogno di un ambiente che ci consenta di fare tutto in maniera "rapida e funzionale"
+        -->
+
+
+        <!-- 
+        Caratteristiche fondamentali di Angular ( di una qualunque web app):
+        - Manipolazione del DOM: Scrivo un HTML statico, ma che cambia se accade qualcosa a livello JS.
+        - State Management: Se io sto sul carrello dell'Ecommerce, l'applicazione mi deve attivare determinate funzionalità ( modifica oggetti carrello, pagamento, etc...). Se poi torno sul catalogo, non sto più sulle funzionalità del carrello ma sul catalogo. Quelle funzionalità del carrello non devono restare in memoria, ma devono essere scaricate. Rimane attivo solo quello che serve. Angular lo fa in maniera nativa.
+        - Routing: Al cambio "pagina" non sto effettivamente cambiando pagina, ma sto caricando componnenti di quella pagina
+        - Gestione Form: Il form è il principale strumento di interazione tra utente e applicazione. Angular ha 2 ( template e reactive ). Gestione del form in maniera nativa ( il solo infilare un form in HTML fa in modo che l)
+        - Http Client: 
+        
+        -->
+        
+        <!-- 
+        Angular fa uso dei Decoratori per allegare dati extra alle classi normali ( si attivano con @Component ). E Angular grazie ad essi manipola e connette il DOM. Quindi non dovremmo mai fare uso dei vari display: none, visibility: hidden, etc... ci pensa Angular. Questi non servono più.
+        -->
+
+        <!-- 
+            React è una libreria creata da Facebook per il rendering del contenuto del DOM. Nasce dunque per il rendering ( per le interfacce ).
+            Offre tutti gli strumenti per capire cosa, come e quando "qualcosa" deve essere manipolato all'interno del dom ( tramite un linguaggio chiamato JSX)
+
+            A differenza di Angular, l'unica cosa che React ha di nativo è la manipolazione del DOM ( non ha Routing, Gestione Form e Http Client. Bisognerà quindi ricorrere ad altre librerie per intergrare queste funzionalità.)
+
+            Pur essendo React più usato a livello globale, facciamo Angular poiché è più solido come basi ( e una volta imparato esso, imparare React è semplice. Fare l'opposto è difficile. Angular necessita di guida)
+        -->
+
+        <!-- 
+
+            Vue offre una gestione dello stato integrata e routing ( in aggiunta alla manipolazione del DOM ), ma non offre convalida moduli e funzionalità del client HTTP.
+            Qualcosa più di react, qualcosa in meno di angular.
+
+            Come angular, non mischia HTML e JS ma ne separa la logica.
+            Supporta JSX, ma nella stragrande maggioranza si tratterà di semplcie JS.
+         -->
+
+         <!-- 
+            Angular nasce per creare Applicazioni ( la grafica è secondaria ) e le interazioni con le basi dati ( quindi con le API ).
+            Angular, React e Vue non sono uno meglio dell'altro, ma sono più o meno specifici a seconda del task.
+            
+            Differenza tra sviluppatore e programmatore ( sviluppatore partecipa al briefing e "suggerisce" cosa utilizzare per la task in questione )
+            Per piccole realtà ( app, siti, piccoli ecommerce) react traina perché è più veloce ( e quindi costa meno )
+
+            Per le grandi aziende ( grandi progetti ) vince angular.
+          -->
+
+          <!-- 
+            L'architettura Spa è la costruzione in un singolo file HTML nel cui scenario si sviluppa tutta l'applicazione.
+            Non scriviamo un solo file HTML, ma un solo file HTML è esposto ( alla volta ).
+
+            Le richieste ( al click ) fa sì che vengano caricati un gruppo di dati, che vengono renderizzati in template scaricati al bootstrap dell'applicazione ( non bootstrap il framework )
+
+            L'applicazione a pagina semplice è, ovviamente, molto più semplice da gestire:
+            - No rendering lato server, ma tutto lato client.
+
+            Un unico file index.html con un bundle CSS e un bundle JS che possiamo salvare su un qualunque server di contenuti statici ( Apache, Nginx, Amazon S3, o firebase Hosting ).
+            Questo per dire che non occorre un server particolare per pubblicare contenuti Angular.
+           -->
+
+           <!-- 
+            Vantaggi SPA:
+            - Controllo Versioni e Rollback: Quando faccio il commit ( git ) posso gestire il versioning di quell'applicazione. Controllo la versione successiva. Se funziona, ok, altrimenti rollback e torno alla versione precedente.
+
+            Non committiamo quindi tutto, ma committiamo solo una parte ( e generalmente VSC capisce in autonomia cosa committare quando si lavora con Angular )
+
+            - Dopo il caricamento dell pagina iniziale, non viene più inviato HTML sulla rete. Vengono trasmessi solo i dati. Non i files ( questo consente un minore utilizzo di banda, e garantisce una maggiore velocità )
+
+            Una SPA è quindi molto più veloce e leggera ( motivo per cui sul web, in merito a grandi applicazioni, si parla solo di SPA )
+
+            Anche Wordpress usa le SPA, ma a differenza di Angular/JS invia file html e css ( quindi più lento e pesante, risultando in un problema in termini di SEO ).
+
+            Angular Universal ci permette di pre-renderizzare un'applicazione, inviando informazioni SEO diverse a seconda del component ( senza di esso, invieremo solo le info della prima pagina html > index.html, rimanendo impossibilitati a sfruttare il seo per le altre pagine generate tramite JS ).
+
+            -->
+
+            <!-- 
+                Angular consente quindi un'esperienza utenta molto più veloce, a causa della minor banda utilizzata. 
+                Sarà inoltre più semplice da gestire lato cliente ( 3 files minimo. index.html, bundle CSS, bundle JS)
+                Inoltre, la funzionalità di versioning / Rollback ci consentono di lavorare meglio e in maniera mirata.
+
+             -->
+
+        <!-- 
+            Seguiamo l'atomic design per la creazione dei componnenti:
+            1. Atoms ( pag 38. 3 atomi differenti )
+            2. Molecules ( pag 39. mettiamo insieme gli atomi a formare una molecola )
+            3. Organisms (pag 40. le molecole si mettono insieme a creare sezioni più complessie. Ad esempio mettendo queste 3 molecole insieme, creo il mio organismo NAVBAR. Ma posso comunque riutilizzare e riarrangiare le molecole in modo da creare un nuovo organismo, qualora mi serva in futuro )
+            4. Templates ( pag 41. mettiamo insieme più organismi. Ex Navbar + Header + Sections + Articles)
+            5. Pages ( pag  42. Una volta che i templates sono ok, si ricorre a quello chiamato Mockup. Si mettono placeholder images, text, links, etc... per vedere come viene fuori )
+         -->
+
+         <!-- 
+            Anche se più lento, conviene sempre crearsi il proprio tavolo da lavoro per poi poter "riutilizzare" i vari componenti a necessità, consentendomi di ricreare qualsiasi cosa io voglia ( e non solo la richiesta iniziale ). Si investe tempo prima per poi recuperarlo dopo.
+          -->
+
+
+          <!-- 
+            Angular non ha una GUI ( graphic user interface ) ma ha il terminale ( che utilizza per sviluppare, analizzare e mantenere le applicazioni angular ).
+            Si fa quindi tutto da riga di comando.
+
+            Necessita Nodes.js , Npm, Angular CLI e VSC
+
+
+           -->
+
+           <!-- 
+            per creare una nuova applicazione si fa ng new "nome"   ( senza "")
+
+            Angular utilizza schemi ( schematics ) per gestire i propri elementi, i quali utilizzano comandi della CLI  per eseguire delle azioni.
+            Scriveremo questi comandi solo se essenziali, in quanto c'è un'estensione di code che lo fa al posto nostro
+
+            ng generate > genera elementi
+            ng add > aggiunge librerie e funzionalità ( talvolta con Npmi)
+            ng gupdate > aggiorna librerie e progetti ( si installa na nuova versione, si apre il progetto che va aggiornato, si controlla che tutto vada bene, si fanno modifiche )
+
+            ps: è possibile creare pià applicazioni angular nella stessa cartella, ma conviene farlo solo se saranno parte dello stesso progetto.
+
+            Quindi, di default OGNI APPLICAZIONE ANGULAR HA LA PROPRIA CARTELLA SEPARATA DALLE ALTRE
+
+            
+            -->
+        <!-- A fine corso, dare un'occhiata ad Angular JS, in caso di migrazione da Angular JS ad Angular -->
+</body>
+</html>
