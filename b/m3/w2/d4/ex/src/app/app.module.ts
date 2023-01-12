@@ -8,6 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ActivePostComponent } from './components/active-post/active-post.component';
 import { InactivePostComponent } from './components/inactive-post/inactive-post.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { UppercasePipe } from './pipe/uppercase.pipe';
+import { EvidenziaDirective } from './direttive/evidenzia.directive';
+import { UsersPageComponent } from './components/users-page/users-page.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { PostsComponent } from './components/posts/posts.component';
     HomeComponent,
     ActivePostComponent,
     InactivePostComponent,
-    PostsComponent
+    PostsComponent,
+    UppercasePipe,
+    EvidenziaDirective,
+    UsersPageComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
